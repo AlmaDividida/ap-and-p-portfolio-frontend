@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NuestroAdnComponent } from './home/nuestro-adn/nuestro-adn.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NuestroAdnComponent], 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
