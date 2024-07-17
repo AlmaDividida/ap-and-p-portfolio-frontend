@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+.inicio.dark-mode {
+  background-color: #ffffff; /* Fondo oscuro */
+  color: #000000; /* Texto claro */
+}
+
+.inicio.dark-mode .nav button {
+  color: #000000; /* Color de texto de los botones en modo nocturno */
+}
