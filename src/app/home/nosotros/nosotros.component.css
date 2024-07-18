@@ -18,21 +18,36 @@ background-color: #F4F4F4;
   border-radius: 13px;
   width: 795px;
   height: 312px;
-  padding: 50px;
+  padding: 45px;
 }
 
 h2{
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
+  font-size: 25px;
+  line-height: 22.98px;
   font-style: normal;
   text-align: center;
   text-transform: uppercase;
 }
 
+h2::after{
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%);
+  margin: 0 auto 20px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  border-radius: 2px;
+}
+
 p{
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-size: 16px;
+  line-height: 14.06px;
 }
 
 .boton{
@@ -41,13 +56,16 @@ p{
 
 button{
   font-family: "Roboto", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14.06px;
   font-style: normal;
   color: #FFF;
   border: none;
   border-radius: 8px;
   height: 30.34px;
   width: 141.68px;
+  margin-top: 30px;
   box-shadow: rgb(187, 185, 185) 0px 5px 6px;
   background: rgb(0,109,173);
   background: -moz-linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%);
@@ -62,5 +80,5 @@ img{
   left: 0;
   object-fit: cover;
   object-position: center;
-
 }
+
