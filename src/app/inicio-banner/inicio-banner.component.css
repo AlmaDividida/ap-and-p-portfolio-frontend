@@ -1,111 +1,163 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 
 .banner {
-  box-sizing: border-box;
-  position: relative;
-  width: 100%;
+
+  color: #fff;
+  padding: 50px 20px 0 5px;
+  background-image: url(/img/back.svg), linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%); 
+  background-size:100%;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column; 
   height: 100vh; 
-  overflow: hidden; 
-  background-color: rgba(187, 187, 187, 0);
-  color: #ffffff;
-}
-
-
-.banner svg {
-  position: absolute; 
-  width: 100%; 
-  height: 100%; 
-  z-index: -1; 
-  transform: scaleX(-1);
-  background: rgb(0, 109, 173);
-  background: -moz-linear-gradient(90deg, rgba(0, 230, 220, 1) 0%, rgba(0, 184, 241, 1) 50%, rgba(0, 109, 173, 1) 100%);
-  background: -webkit-linear-gradient(90deg, rgba(0, 230, 220, 1) 0%, rgba(0, 184, 241, 1) 50%, rgba(0, 109, 173, 1) 100%);
-  background: linear-gradient(90deg, rgba(0, 230, 220, 1) 0%, rgba(0, 184, 241, 1) 50%, rgba(0, 109, 173, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00e6dc", endColorstr="#006dad", GradientType=1);
   background-repeat: no-repeat;
-  padding-top: 23%;
 }
 
 
-.banner.dark-mode {
-  background-color: #333333; 
-  color: #000000; 
+.banner-header {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  padding: 10px 0px 0 50px;
+  font-family: Roboto;
 }
-
 
 
 .logo {
-  position: absolute;
-  left: 12%;
-  display: flex;
-  margin: 20px 30px 0 0px;
-  font-family: Ubuntu, sans-serif; /
+  font-family: Ubuntu;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 
-.navegacion {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+
+.navigation ul {
   display: flex;
-  margin: 20px 5px 0 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 
-.navegacion button {
-  padding: 5px 10px;
-  margin: 0 2px;
-  background-color: transparent; 
-  color: #ffffff; 
-  border-radius: 20px;
-  border: none;
+.navigation li {
+  margin: 0 15px;
+}
+
+a:hover, button:hover{
+
+background-color: #8b929160;
+border-radius: 7px;
+}
+
+a:hover{
+
+padding: 5PX;
+
+  }
+  
+
+
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+
+.night-mode-toggle {
+  position:relative;
+  bottom: 10px;
+}
+
+
+.night-mode-toggle input[type="checkbox"] {
+  display: none;
+}
+
+
+
+.night-mode-toggle label {
+  width: 40px;
+  height: 20px;
+  background: #faf9c0;
+  border-radius: 50%;
+  position: relative;
   cursor: pointer;
-  font-family: Ubuntu, sans-serif; 
 }
 
 
-.navegacion button:hover {
-  background-color: rgba(167, 169, 172, 0.6); 
+
+.night-mode-toggle label::after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: #eff7e1;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: 0.3s;
 }
 
-
-.textos {
-  margin: 10% 10%;
-  width: 50%;
+.night-mode-toggle input:checked + label::after {
+  left: 21px;
 }
 
-
-.textos header {
-  margin-top: 20px;
-  text-align: left;
-  margin: 50px 20px 10px 20px;
-  font-family: Ubuntu, sans-serif; 
+.banner-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  /*padding: 20vh 10vw 0vh 10vw ;*/
+
+  padding: 150px 60px 0px 100px;
 }
 
-
-
-.contenido.conocenosb button {
-border-radius: 50px;
- 
-}
-
-
-.contenido {
-  margin: 20px;
+.text-content {
+  max-width: 40%;
+  height: auto;
+  margin-right:25px;
   
 }
 
-.contenido p {
-  margin-top: 10px;
-  font-family: Roboto, sans-serif; 
+.text-content h1 {
+  font-size: 2rem;
+  font-family: Ubuntu;
+  font-weight: 700;
+  
 }
 
+.text-content p {
+  font-size: 1rem;
+  margin: 10px 0;
+  font-family: Roboto;
+}
 
-.imagen img {
-  right: 12%;
+.contact-button {
+  padding: 10px 20px;
+  background:#fff;
+  color:#000;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: .8rem;
+  font-weight: bold;
+  font-family: Ubuntu;
+}
+
+.image-content img {
   max-width: 100%;
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column;
+  }
+
+  .text-content, .image-content {
+    max-width: 100%;
+    text-align: center;
+    
+  }
 }
