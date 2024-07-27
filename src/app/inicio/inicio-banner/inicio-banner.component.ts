@@ -15,10 +15,13 @@ export class InicioBannerComponent {
   isDarkMode: boolean = false;
 
   toggleDarkMode() {
-   
-
+  
     this.isDarkMode = !this.isDarkMode;
     this.darkMode = this.isDarkMode;
 
+  }
+
+  test() {
+    console.log("Funciona el boton :D")
   }
 }
