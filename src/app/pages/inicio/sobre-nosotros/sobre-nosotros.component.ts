@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-nosotros',
+  selector: 'app-sobre-nosotros',
   standalone: true,
   imports: [
     CommonModule,
   ],
-  templateUrl: './nosotros.component.html',
-  styleUrl: './nosotros.component.css',
+  templateUrl: './sobre-nosotros.component.html',
+  styleUrl: './sobre-nosotros.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NosotrosComponent { }
+export class SobreNosotrosComponent { }

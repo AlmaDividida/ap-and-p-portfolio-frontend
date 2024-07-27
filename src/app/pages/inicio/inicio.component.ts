@@ -1,19 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NosotrosComponent } from "./nosotros/nosotros.component";
+import { SobreNosotrosComponent } from "./sobre-nosotros/sobre-nosotros.component";
 import { NuesAdnComponent } from "./nues-adn/nues-adn.component";
 import { InicioBannerComponent } from './inicio-banner/inicio-banner.component';
 import { FooterComponent } from "./footer/footer.component";
+import { ContactoComponent } from './contacto/contacto.component';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
   imports: [
     CommonModule,
-    NosotrosComponent,
+    SobreNosotrosComponent,
     NuesAdnComponent,
     InicioBannerComponent,
-    FooterComponent
+    FooterComponent,
+    ContactoComponent,
 ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css',

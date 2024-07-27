@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:host {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F4F4F4;
+}
+
+.contact-section {
+  padding: 50px 0;
+
+  .section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .contact-header {
+      text-align: center;
+      max-width: 300px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+
+      h2 {
+        font-family: 'Ubuntu', sans-serif;
+        text-transform: uppercase;
+       }
+  
+      h2::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%);
+        margin: 0 auto 20px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        border-radius: 2px;
+      }
+    }
+
+    .contact-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .contact-form {
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        margin-bottom: 40px;
+        form {
+          margin: 0 10px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          input, textarea {
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            resize: none;
+            ::placeholder {
+              color: #999999;
+            }
+          }
+
+          input:focus, textarea:focus {
+            outline: none;
+          }
+
+          textarea {
+            height: 100px;
+          }
+
+          .contact-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+              border: none;
+              border-radius: 10px;
+              padding: 10px 20px;
+              cursor: pointer;
+              transition: all 0.3s ease;
+            }
+
+            .send-button {
+              flex-basis: 85%;
+              background: linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%);
+              color: white;
+              text-transform: uppercase;
+            }
+
+            @media (min-width: 768px) {
+              .send-button {
+                flex-basis: 90%;
+              }
+            }
+
+            .send-button:hover {
+              background: linear-gradient(90deg, rgba(0,184,241,1) 0%, rgba(0,109,173,1) 50%, rgba(0,230,220,1) 100%);
+            }
+
+            .send-button:active {
+              transform: scale(0.95);
+            }
+
+            .send-button:focus {
+              outline: none;
+            }
+
+            .send-button:hover {
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .send-button:active {
+              transform: scale(0.95);
+            }
+
+            .send-button:focus {
+              outline: none;
+            }
+
+            .send-button:hover {
+              box-shadow: 0
+            }
+
+            .wp-button {
+              border-radius: 100%;
+              background: #00E6DC;
+              color: white;
+              padding: 10px;
+
+              &:hover {
+                background: #00B8F1;
+              }
+
+              &:active {
+                transform: scale(0.95);
+              }
+
+              &:focus {
+                outline: none;
+              }
+              
+              .wp-icon {
+                background-image: url("/img/whatsapp-ico.svg");
+                background-size: cover;
+                background-position: center;
+                width: 20px;
+                height: 20px;
+              }
+
+            }
+          }
+
+          .contact-privacy {
+            text-align: start;
+            margin: 10px 0;
+            a {
+              color: rgba(0,184,241,1);
+              text-decoration: none;
+              transition: all 0.3s ease;
+            }
+          }
+        }
+      }
+
+      @media (min-width: 768px) {
+        .contact-form {
+          margin-bottom: auto;
+        }
+        
+      }
+
+      .contact-image {
+        img {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      .contact-body {
+        flex-direction: row;
+        justify-content: space-between;
+
+        .contact-form {
+          flex-basis: 50%;
+        }
+
+        .contact-image {
+          flex-basis: 50%;
+        }
+      }
+    }
+  }
+}
+
