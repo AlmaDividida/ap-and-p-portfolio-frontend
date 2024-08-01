@@ -6,7 +6,7 @@
 
 .seccion{
 background-color: #F4F4F4;
-
+  position: relative;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -76,7 +76,7 @@ button{
 
 img{
   position: absolute;
-  top: 0;
+  top: 50;
   left: 0;
   object-fit: cover;
   object-position: center;
