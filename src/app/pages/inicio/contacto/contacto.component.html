@@ -6,7 +6,7 @@
         </div>
         <div class="contact-body">
             <div class="contact-form">
-                <form action="">
+                <form [formGroup]="contactForm" (ngSubmit)="sendContactForm()">
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre">
                     <input type="email" name="email" id="email" placeholder="Email">
                     <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje..."></textarea>
