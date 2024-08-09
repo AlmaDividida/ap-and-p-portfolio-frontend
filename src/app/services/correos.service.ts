@@ -8,13 +8,16 @@ import { Observable } from 'rxjs';
 export class CorreosService {
 
   url: String = "http://localhost:8080";
+  headers: any = {
+    "Content-Type": "application/json",
+  };
 
   constructor(
     protected http: HttpClient,
   ) { }
 
   sendEmail(data: any): Observable<any> {
-    return this.http.post(this.url + "/correos/enviar", data);
+    return this.http.post(`${this.url}/correos/enviar`, data, { headers: this.headers });
   }
 
 }

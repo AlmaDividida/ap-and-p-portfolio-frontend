@@ -7,9 +7,9 @@
         <div class="contact-body">
             <div class="contact-form">
                 <form [formGroup]="contactForm" (ngSubmit)="sendContactForm()">
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-                    <input type="email" name="email" id="email" placeholder="Email">
-                    <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje..."></textarea>
+                    <input formControlName="nombre" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input formControlName="email" type="email" name="email" id="email" placeholder="Email">
+                    <textarea formControlName="mensaje" name="mensaje" id="mensaje" placeholder="Escribe tu mensaje..."></textarea>
                     <div class="contact-buttons">
                         <button class="send-button" type="submit">Enviar</button>
                         <a href="https://wa.me/1XXXXXXXXXX" class="wp-button" type="whatsapp">

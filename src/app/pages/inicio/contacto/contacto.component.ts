@@ -14,7 +14,7 @@ import { CorreosService } from '../../../services/correos.service';
   styleUrl: './contacto.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactoComponent { 
+export class ContactoComponent {
 
   public contactForm = new FormGroup({
     nombre: new FormControl('', Validators.required),
@@ -29,6 +29,7 @@ export class ContactoComponent {
 
   sendContactForm() : void {
     if (this.contactForm.valid) {
+      console.log(this.contactForm.value);
       this.service.sendEmail(this.contactForm.value).subscribe(
         (response) => {
           console.log(response);
