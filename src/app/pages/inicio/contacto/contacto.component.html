@@ -1,4 +1,4 @@
-<section class="contact-section">
+<section [className]="'contact-section ' + getColorClass()">
     <div class="section-content">
         <div class="contact-header">
             <h2>Contacto</h2>
@@ -12,7 +12,7 @@
                     <textarea formControlName="mensaje" name="mensaje" id="mensaje" placeholder="Escribe tu mensaje..."></textarea>
                     <div class="contact-buttons">
                         <button class="send-button" type="submit">Enviar</button>
-                        <a href="https://wa.me/1XXXXXXXXXX" class="wp-button" type="whatsapp">
+                        <a href="https://wa.me/15537215097?text=Hola%20quiero%20más%20información" target="_blank" class="wp-button">
                             <div class="wp-icon"></div>
                         </a>
                     </div>

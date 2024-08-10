@@ -79,3 +79,13 @@ p{
 .info-tarjeta{
   color: #F4F4F4;
 }
+
+.color-dark{
+  background-color: #333!important;
+  color: #F4F4F4!important;
+}
+
+.color-light{
+  background-color: #F4F4F4!important;
+  color: #333!important;
+}

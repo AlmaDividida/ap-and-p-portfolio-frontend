@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CorreosService } from '../../../services/correos.service';
+import { DarkModeService } from '../../../services/dark-mode.service';
 
 @Component({
   selector: 'app-contacto',
@@ -14,7 +15,7 @@ import { CorreosService } from '../../../services/correos.service';
   styleUrl: './contacto.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactoComponent {
+export class ContactoComponent { 
 
   public contactForm = new FormGroup({
     nombre: new FormControl('', Validators.required),
@@ -24,7 +25,12 @@ export class ContactoComponent {
 
   constructor(
     protected service: CorreosService,
+    protected darkModeService: DarkModeService,
   ) { }
+
+  getColorClass() {
+    return this.darkModeService.getDarkMode() ? 'color-dark' : 'color-light';
+  }
   
 
   sendContactForm() : void {

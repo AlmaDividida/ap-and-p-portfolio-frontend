@@ -82,3 +82,20 @@ img{
   object-position: center;
 }
 
+.color-dark {
+  background-color: #333!important;
+  .tarjeta{
+    background: rgba(0, 0, 0, 0.2)!important;
+    color: #f4f4f4!important;
+    button{
+      box-shadow: rgb(35, 35, 35) 0px 5px 6px;
+    }
+  }
+}
+
+.color-light {
+  background-color: #f4f4f4!important;
+  .tarjeta{
+    color: #333!important;
+  }
+}

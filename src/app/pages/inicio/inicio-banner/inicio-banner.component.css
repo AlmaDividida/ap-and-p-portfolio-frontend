@@ -1,7 +1,6 @@
 .banner {
   box-sizing: border-box;
   padding: 40px;
-  background-image: url("/img/back.svg"), linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%); /* Superponer la imagen SVG sobre el degradado */
   background-size: contain;
   background-position: bottom;
   display: flex;
@@ -12,8 +11,6 @@
   background-repeat: no-repeat;
   color:#fff;
 }
-
-
 
 .banner.dark-mode {
   background-color: #333333; 
@@ -140,4 +137,38 @@
     max-width: 100%;
     text-align: center;
   }
+}
+
+.color-light {
+  a {
+    color: #f4f4f4!important;
+  }
+  label::after {
+    background-color: #f4f4f4!important;
+  }
+  .contact-button {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+}
+
+.banner.color-light {
+  background-image: url("/img/back.svg"), linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%); /* Superponer la imagen SVG sobre el degradado */
+}
+
+.color-dark {
+  a {
+    color: #333!important;
+  }
+  label::after {
+    background-color: #333!important;
+  }
+  .contact-button {
+    background-color: #333;
+    color: #f4f4f4;
+  }
+  
+}
+.banner.color-dark{
+  background-image: url("/img/back-dark.svg"), linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%); /* Superponer la imagen SVG sobre el degradado */
 }

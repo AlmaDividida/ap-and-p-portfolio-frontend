@@ -1,6 +1,7 @@
 
 import { Component, HostBinding } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DarkModeService } from '../../../services/dark-mode.service';
 @Component({
   selector: 'app-inicio-banner',
   standalone: true,
@@ -10,15 +11,17 @@ import { CommonModule } from '@angular/common';
 })
 export class InicioBannerComponent {
 
-  @HostBinding('class.dark-mode') darkMode = false;
 
-  isDarkMode: boolean = false;
+  constructor(
+    protected darkModeService: DarkModeService
+  ) {}
 
   toggleDarkMode() {
-  
-    this.isDarkMode = !this.isDarkMode;
-    this.darkMode = this.isDarkMode;
+    this.darkModeService.toggleDarkMode();
+  }
 
+  getColorClass() {
+    return this.darkModeService.getDarkMode() ? 'color-dark' : 'color-light';
   }
 
   test() {

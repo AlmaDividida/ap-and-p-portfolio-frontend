@@ -1,5 +1,7 @@
 <app-inicio-banner></app-inicio-banner>
-<div class="background">
+<div [className]="
+    darkModeService.darkMode() ? 'bg-dark' : 'bg-light'
+">
     <app-sobre-nosotros></app-sobre-nosotros>
     <app-nues-adn></app-nues-adn>
     <app-contacto></app-contacto>

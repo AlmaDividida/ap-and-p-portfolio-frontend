@@ -200,3 +200,19 @@
   }
 }
 
+.color-light {
+  background-color: #F4F4F4!important;
+  color: #333!important;
+  input, textarea {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.color-dark {
+  background-color: #333!important;
+  color: #F4F4F4!important;
+  input, textarea {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #F4F4F4;
+  }
+}

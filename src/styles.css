@@ -8,8 +8,21 @@
   color: #000000; /* Color de texto de los botones en modo nocturno */
 }
 
+.bg-light {
+  background-color: #F4F4F4!important;
+}
 
+.bg-dark {
+  background-color: #333!important;
+}
 
+.color-dark {
+  color: #333!important;
+}
+
+.color-light {
+  color: #F4F4F4!important;
+}
 
 
 
