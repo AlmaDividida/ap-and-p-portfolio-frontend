@@ -28,4 +28,5 @@ export default class InicioComponent {
   constructor(
     protected darkModeService: DarkModeService,
   ) { }
+  
 }

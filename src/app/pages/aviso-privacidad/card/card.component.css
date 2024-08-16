@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  font-family: Roboto;
+}
+
+h1 {
+  font-family: Ubuntu;
+  text-align: center;
+}
+
+.card-footer {
+  text-align: end;
+}

@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CorreosService } from '../../../services/correos.service';
 import { DarkModeService } from '../../../services/dark-mode.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contacto',
@@ -10,6 +11,7 @@ import { DarkModeService } from '../../../services/dark-mode.service';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    RouterModule,
   ],
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.css',

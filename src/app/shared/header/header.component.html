@@ -1,0 +1,23 @@
+<header 
+    [ngClass]="darkModeService.darkMode() ? 'color-light' : 'color-dark'"
+    class="header"
+>
+    <div class="header-content">
+        <div class="logo">AP&P</div>
+        <nav class="navbar">
+            <ul class="nav">
+                <li><a href="#">INICIO</a></li>
+                <li><a href="#">NOSOTROS</a></li>
+                <li><a href="#">SERVICIOS</a></li>
+                <li><a href="#">PROYECTOS</a></li>
+                <li><a href="#">EQUIPO</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+        </nav>
+        <div class="night-mode-toggle">
+            <input type="checkbox" id="darkModeToggle" (change)="toggleDarkMode()">
+            <input type="checkbox" id="night-mode" (change)="toggleDarkMode()">
+            <label for="night-mode"></label>
+        </div>
+    </div>
+</header>

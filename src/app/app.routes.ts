@@ -12,6 +12,11 @@ export const routes: Routes = [
         title: "AP&P Nosotros"
     },
     {
+        path: "aviso-privacidad",
+        loadComponent: () => import('./pages/aviso-privacidad/aviso-privacidad.component'),
+        title: "AP&P Aviso de Privacidad"
+    },
+    {
         path: "**",
         pathMatch: "full",
         redirectTo: "inicio",
