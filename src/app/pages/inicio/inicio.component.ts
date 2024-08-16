@@ -5,6 +5,7 @@ import { NuesAdnComponent } from "./nues-adn/nues-adn.component";
 import { InicioBannerComponent } from './inicio-banner/inicio-banner.component';
 import { FooterComponent } from "./footer/footer.component";
 import { ContactoComponent } from './contacto/contacto.component';
+import { ProyectosComponent } from "./proyectos/proyectos.component";
 
 @Component({
   selector: 'app-inicio',
@@ -16,6 +17,7 @@ import { ContactoComponent } from './contacto/contacto.component';
     InicioBannerComponent,
     FooterComponent,
     ContactoComponent,
+    ProyectosComponent
 ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css',
