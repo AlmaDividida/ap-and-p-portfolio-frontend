@@ -6,6 +6,7 @@ import { InicioBannerComponent } from './inicio-banner/inicio-banner.component';
 import { FooterComponent } from "./footer/footer.component";
 import { ContactoComponent } from './contacto/contacto.component';
 import { DarkModeService } from '../../services/dark-mode.service';
+import { ProyectosComponent } from "./proyectos/proyectos.component";
 
 @Component({
   selector: 'app-inicio',
@@ -17,6 +18,7 @@ import { DarkModeService } from '../../services/dark-mode.service';
     InicioBannerComponent,
     FooterComponent,
     ContactoComponent,
+    ProyectosComponent
 ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css',
