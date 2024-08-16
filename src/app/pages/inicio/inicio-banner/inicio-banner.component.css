@@ -53,8 +53,12 @@
   text-decoration: none;
   font-size: .9rem;
   color: #fff;
+  cursor: pointer;
 }
-
+.navigation a:hover{
+  color:blue !important;
+  text-decoration: none;
+}
 .night-mode-toggle {
 
   position: left;
