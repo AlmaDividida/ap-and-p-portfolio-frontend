@@ -27,4 +27,14 @@ export class InicioBannerComponent {
   test() {
     console.log("Funciona el boton :D")
   }
+
+  scrollToSection(sectionClass: string) {
+    const element = document.querySelector(`.${sectionClass}`);
+    if (element) {
+      window.scrollTo({
+        top: element.getBoundingClientRect().top + window.pageYOffset - 100, // Ajusta el offset según sea necesario
+        behavior: 'smooth'
+      });
+    }
+  }
 }
