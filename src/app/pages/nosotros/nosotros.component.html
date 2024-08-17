@@ -1,1 +1,78 @@
-<p>Yo habia ponido una pagina de nosotros aqui!</p>,
+<div [ngClass]="darkModeService.darkMode() ? 'color-dark' : 'color-light'">
+  <app-header />
+    <div class="sobre-nosotros__seccion">
+        <div class="hero__section">
+            <div class="hero__content"></div>
+        </div>
+        <div class="container">
+            <h1>Sobre Nosotros</h1>
+            
+            <div class="about__section">
+                <p>En <strong>AP&P</strong>, somos un equipo apasionado por la tecnología, dedicado a proporcionar soluciones innovadoras que transformen la manera en que las empresas operan. Con una vasta experiencia en el sector tecnológico, nos comprometemos a ofrecer productos y servicios que superen las expectativas de nuestros clientes.</p>
+            </div>
+    
+            <div class="history__section">
+                <div>
+                    <h2>Nuestra Historia</h2>
+                    <p>Fundada en [Año de Fundación], [Nombre de la Empresa] comenzó como una pequeña startup con la visión de crear soluciones tecnológicas que facilitaran la vida de las personas. A lo largo de los años, hemos crecido y evolucionado, adaptándonos a las necesidades cambiantes del mercado y expandiendo nuestros servicios a nivel global.</p>
+                    <p>Nuestro viaje ha estado marcado por la innovación constante y el compromiso con la excelencia. Desde nuestros primeros proyectos hasta las soluciones de vanguardia que ofrecemos hoy, hemos mantenido un enfoque en la calidad y en construir relaciones duraderas con nuestros clientes.</p>    
+                </div>
+            </div>
+
+            <div class="mision_vision__section">
+                <div class="mision_vision_image">
+                    <img src="https://cdn-gcp.new.marutitech.com/Hero_Section_37f6ac77ee.png" alt="">
+                </div>
+                <div>
+                    <div class="mission">
+                        <h2>Nuestra Misión</h2>
+                        <!-- <img src="https://www.pega.com/sites/default/files/styles/2560/public/media/images/2024-01/pwi24-intro-graphic.png?itok=rAvfnxGS" alt="Misión de la Empresa"> -->
+                        <p>Nuestra misión es ser un socio estratégico para nuestros clientes, ayudándolos a alcanzar sus metas a través de soluciones tecnológicas personalizadas. Creemos en el poder de la tecnología para impulsar el éxito empresarial, y nos dedicamos a ofrecer productos y servicios que generan un impacto positivo en los negocios y en la sociedad.</p>
+                    </div>
+            
+                    <div class="vision">
+                        <h2>Nuestra Visión</h2>
+                        <!-- <img src="https://www.pega.com/sites/default/files/styles/2560/public/media/images/2024-01/pwi24-intro-graphic.png?itok=rAvfnxGS" alt="Visión de la Empresa"> -->
+                        <p>Nuestra visión es convertirnos en líderes globales en el sector de soluciones TI, reconocidos por nuestra capacidad para innovar y transformar negocios. Queremos ser la primera opción para las empresas que buscan un socio tecnológico confiable, comprometido con el éxito a largo plazo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="values__section">
+                <h2>Nuestros Valores</h2>
+                <div class="valores">
+                    <div>
+                        <h3>Innovación</h3>
+                        <p>Nos mantenemos a la vanguardia de la tecnología, buscando continuamente nuevas formas de mejorar y ofrecer soluciones que marquen la diferencia. La innovación es el motor que impulsa nuestro crecimiento y éxito.</p>
+                    </div>
+                    <div>
+                        <h3>Integridad</h3>
+                        <p>Creemos en hacer lo correcto en todo momento. La honestidad y la transparencia son fundamentales en todas nuestras interacciones, tanto con nuestros clientes como dentro de nuestro equipo.</p>
+                    </div>
+        
+                    <div>
+                        <h3>Excelencia</h3>
+                        <p>Nos esforzamos por alcanzar la perfección en cada proyecto que emprendemos. Desde la planificación hasta la ejecución, la excelencia es nuestra meta en cada paso del camino.</p>
+                    </div>
+        
+                    <div>
+                        <h3>Colaboración</h3>
+                        <p>El trabajo en equipo es clave para nuestro éxito. Valoramos la diversidad de ideas y fomentamos un ambiente de colaboración donde cada miembro del equipo puede contribuir a nuestro éxito colectivo.</p>
+                    </div>
+        
+                    <div>
+                        <h3>Compromiso con el Cliente</h3>
+                        <p>Nos dedicamos a entender y satisfacer las necesidades de nuestros clientes. Su éxito es nuestro éxito, y nos esforzamos por construir relaciones duraderas basadas en la confianza y el respeto mutuos.</p>
+                    </div>
+                </div>
+            </div>
+<!--     
+            <div class="leadership__section">
+                <h2>Equipo de Liderazgo</h2>
+                
+            </div> -->
+    
+        </div>
+    </div>
+  <app-footer />
+</div>

@@ -33,6 +33,11 @@
           margin-bottom: 1rem;
           a {
             text-decoration: none;
+            font-size: .8rem;
+          }
+          a:hover {
+            color: #828282;
+            transition: .3s;
           }
         }
         @media screen and (min-width: 768px) {
@@ -118,4 +123,3 @@
   }
   transition: .3s;
 }
-

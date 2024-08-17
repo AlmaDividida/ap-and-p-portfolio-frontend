@@ -1,3 +1,153 @@
 :host {
   display: block;
+  font-family: Roboto;
+}
+img {
+  max-width: 100%;
+}
+
+
+h1{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 22.98px;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h1::after{
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%);
+  margin: 0 auto 20px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  border-radius: 2px;
+}
+
+h2::after{
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%);
+  margin-top: 10px;
+  margin-bottom: 40px;
+  border-radius: 2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Ubuntu;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 2rem 0;
+  }
+}
+
+.sobre-nosotros__seccion {
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .sobre-nosotros__seccion {
+    padding-top: 3.5rem;
+  }
+  
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: url("/img/nosotros.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 1rem;
+  color: #f4f4f4;
+  height: 10vh;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__content {
+    height: 30vh;
+  }
+  
+}
+
+
+
+
+.color-dark {
+  background-color: #333!important;
+  color: #f4f4f4!important;
+}
+
+.color-light {
+  background-color: #f4f4f4!important;
+  color: #333!important;
+}
+
+.history__section {
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .history__section {
+    padding: 2rem 0;
+  }
+  
+}
+
+.mision_vision__section {
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .mision_vision__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    text-align: left;
+  }
+  
+}
+
+.valores{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .valores {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+}
+
+@media screen and (min-width: 1024px) {
+  .valores {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
 }
