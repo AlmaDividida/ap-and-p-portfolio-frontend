@@ -216,3 +216,69 @@
     color: #F4F4F4;
   }
 }
+
+
+.mensaje_enviado__modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.mensaje_enviado__modal.active {
+  display: flex;
+}
+
+.mensaje_enviado__modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+}
+
+.mensaje_enviado__modal-content h2 {
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.mensaje_enviado__modal-content p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 14.06px;
+  margin-bottom: 20px;
+}
+
+.mensaje_enviado__modal-header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.mensaje_enviado__modal-header button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.mensaje_enviado__modal-header button img {
+  width: 20px;
+  height: 20px;
+}
+
+.modal-button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}

@@ -12,12 +12,12 @@
                     <textarea formControlName="mensaje" name="mensaje" id="mensaje" placeholder="Escribe tu mensaje..."></textarea>
                     <div class="contact-buttons">
                         <button class="send-button" type="submit">Enviar</button>
-                        <a href="https://wa.me/15537215097?text=Hola%20quiero%20más%20información" target="_blank" class="wp-button">
+                        <a href="https://wa.me/15537215097?text=Hola%20[Nombre%20de%20la%20Empresa],%20me%20gustaría%20recibir%20más%20información%20sobre%20sus%20servicios." target="_blank" class="wp-button">
                             <div class="wp-icon"></div>
                         </a>
                     </div>
                     <div class="contact-privacy">
-                        <a href="#">Aviso de Privacidad</a>
+                        <a [routerLink]="['/aviso-privacidad']" >Aviso de privacidad</a> 
                     </div>
                 </form>
             </div>
@@ -27,3 +27,21 @@
         </div>
     </div>
 </section>
+
+<div
+ [class]="{'active': isModalActived}"
+ class="mensaje_enviado__modal">
+    <div class="mensaje_enviado__modal-content">
+        <div class="mensaje_enviado__modal-header">
+            <button (click)="closeModal()" class="close-button">
+                <img src="img/xmark-solid.svg" alt="">
+            </button>
+        </div>
+        <div class="mensaje_enviado__modal-body">
+            <h2>Mensaje enviado</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCOEXfUNu8TtVyUiL9XH9eV_Fi-d3PmiaunQ&s" alt="">
+            <p>¡Gracias por tu mensaje! Nos pondremos en contacto contigo lo más pronto posible.</p>
+            <button (click)="closeModal()" class="modal-button">Continuar</button>
+        </div>
+    </div>
+</div>

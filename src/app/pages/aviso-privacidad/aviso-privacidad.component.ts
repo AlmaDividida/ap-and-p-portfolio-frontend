@@ -1,22 +1,24 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { HeaderComponent } from '../../shared/header/header.component';
-import { FooterComponent } from '../inicio/footer/footer.component';
+import { HeaderComponent } from "../../shared/header/header.component";
+import { FooterComponent } from "../inicio/footer/footer.component";
+import { CardComponent } from "./card/card.component";
 import { DarkModeService } from '../../services/dark-mode.service';
 
 @Component({
-  selector: 'app-nosotros',
+  selector: 'app-aviso-privacidad',
   standalone: true,
   imports: [
     CommonModule,
     HeaderComponent,
     FooterComponent,
-  ],
-  templateUrl: './nosotros.component.html',
-  styleUrl: './nosotros.component.css',
+    CardComponent
+],
+  templateUrl: './aviso-privacidad.component.html',
+  styleUrl: './aviso-privacidad.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class NosotrosComponent {
+export default class AvisoPrivacidadComponent { 
   constructor(
     protected darkModeService: DarkModeService
   ) {}

@@ -1,25 +1,30 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { HeaderComponent } from '../../shared/header/header.component';
-import { FooterComponent } from '../inicio/footer/footer.component';
 import { DarkModeService } from '../../services/dark-mode.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-nosotros',
+  selector: 'app-header',
   standalone: true,
   imports: [
     CommonModule,
-    HeaderComponent,
-    FooterComponent,
+    RouterModule
   ],
-  templateUrl: './nosotros.component.html',
-  styleUrl: './nosotros.component.css',
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class NosotrosComponent {
+export class HeaderComponent {
+  visible: boolean;
   constructor(
     protected darkModeService: DarkModeService
-  ) {}
+  ) {
+    if (typeof window !== "undefined") {
+      this.visible = !(window.innerWidth < 768);
+   } else {
+      this.visible = true;
+    }
+  }
 
   toggleDarkMode() {
     this.darkModeService.toggleDarkMode();
@@ -27,5 +32,9 @@ export default class NosotrosComponent {
 
   getColorClass() {
     return this.darkModeService.getDarkMode() ? 'color-dark' : 'color-light';
+  }
+
+  toggleMenu() {
+    this.visible = !this.visible;
   }
 }

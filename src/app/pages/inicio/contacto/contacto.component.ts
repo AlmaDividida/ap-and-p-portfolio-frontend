@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CorreosService } from '../../../services/correos.service';
 import { DarkModeService } from '../../../services/dark-mode.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contacto',
@@ -10,12 +11,14 @@ import { DarkModeService } from '../../../services/dark-mode.service';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    RouterModule,
   ],
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactoComponent { 
+  isModalActived: boolean = false;
 
   public contactForm = new FormGroup({
     nombre: new FormControl('', Validators.required),
@@ -34,6 +37,7 @@ export class ContactoComponent {
   
 
   sendContactForm() : void {
+    this.openModal();
     if (this.contactForm.valid) {
       console.log(this.contactForm.value);
       this.service.sendEmail(this.contactForm.value).subscribe(
@@ -46,5 +50,16 @@ export class ContactoComponent {
       );
     }
   }
+
+  openModal() {
+    this.isModalActived = true;
+  }
+
+  closeModal() {
+    this.contactForm.reset();
+    this.isModalActived = false;
+  }
+
+  
 
 }

@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { DarkModeService } from '../../../services/dark-mode.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sobre-nosotros',
   standalone: true,
   imports: [
     CommonModule,
+    RouterModule
   ],
   templateUrl: './sobre-nosotros.component.html',
   styleUrl: './sobre-nosotros.component.css',
