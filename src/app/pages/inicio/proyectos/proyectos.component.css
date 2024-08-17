@@ -64,6 +64,13 @@ h2::after{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     font-weight: 500;
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    .boton {
+      width: auto;
+    }
+    
   }
 
   .boton:hover{
@@ -113,7 +120,7 @@ h2::after{
   overflow: hidden;
 
   cursor: pointer;
-  flex-basis: calc(33.3% - 40px); /* 3 -> 100% / 3 -> 33.3%*/
+  flex-basis: 100%; 
   background-color: #F4F4F4;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -121,6 +128,20 @@ h2::after{
   p {
     margin-top: 10px;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .celda {
+    flex-basis: calc(50% - 20px); /* 2 -> 100% / 2 -> 50%*/
+  }
+  
+}
+
+@media screen and (min-width: 1280px) {
+  .celda {
+    flex-basis: calc(33.3% - 20px); /* 3 -> 100% / 3 -> 33.3%*/
+  }
+  
 }
 
 .etiqueta {
