@@ -3,20 +3,27 @@
 }
 
 .seccion{
-background-color: #F4F4F4;
+  background-color: #F4F4F4;
   position: relative;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center; 
 }
 
+
+
 .tarjeta{
   background: #FFF;
   border-radius: 13px;
   width: 795px;
-  height: 312px;
   padding: 45px;
+  margin: 10% 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+
+
+
 }
 
 h2{
@@ -61,8 +68,9 @@ button{
   color: #FFF;
   border: none;
   border-radius: 8px;
-  height: 30.34px;
-  width: 141.68px;
+  height: 30px;
+  cursor: pointer;
+  width: 141px;
   margin-top: 30px;
   box-shadow: rgb(187, 185, 185) 0px 5px 6px;
   background: rgb(0,109,173);
@@ -73,11 +81,12 @@ button{
 }
 
 img{
+  
   position: absolute;
-  top: 50;
   left: 0;
-  object-fit: cover;
-  object-position: center;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
 }
 
 .color-dark {
@@ -97,3 +106,59 @@ img{
     color: #333!important;
   }
 }
+
+
+  @media (max-width: 768px)  {
+  .tarjeta {
+    margin: 5%;
+    width: 90%; 
+    padding: 10% 10% 20% 10%; 
+    
+  }
+
+  h2 {
+    font-size: 1.6rem; 
+  }
+
+
+  p {
+    font-size: 1rem 
+  }
+
+
+  img {
+    width: 100%; 
+  
+    transform: translateX(-70%); 
+  }
+}
+
+    @media(max-width: 1023px){
+
+      .tarjeta{
+        
+        margin: 10% 5%;
+        flex-direction: column; 
+        position: relative;
+
+      }
+
+
+      h2 {
+        font-size: 1.6rem; 
+      }
+    
+    
+      p {
+        font-size: 1rem 
+      }
+
+      img {
+          
+          height: auto;
+          position: absolute; 
+          left: 0;
+          top: -20%;
+      }
+
+    }

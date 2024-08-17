@@ -1,1 +1,17 @@
-<p>miembros works!</p>,
+<div class="contenedor-padre">
+
+
+    @for ( m of miembrosLista ; track m.id) {
+
+      <div class="hijo" (click)="cambiarMiembroSeleccionado(m)">
+        <img [src]="m.imagen" [alt]="m.nombre">
+        <p>Hola</p>
+        <p>soy {{m.nombre}}</p>
+        <p>({{m.apodo}})</p>
+        <p>{{m.puesto}}</p>
+        <p>{{m.descripcion}}</p>
+      </div>
+ 
+
+      }
+</div>
