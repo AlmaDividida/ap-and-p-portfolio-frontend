@@ -7,6 +7,7 @@ import { FooterComponent } from "./footer/footer.component";
 import { ContactoComponent } from './contacto/contacto.component';
 import { DarkModeService } from '../../services/dark-mode.service';
 import { ProyectosComponent } from "./proyectos/proyectos.component";
+import { MiembrosComponent } from "./miembros/miembros.component";
 
 @Component({
   selector: 'app-inicio',
@@ -18,7 +19,8 @@ import { ProyectosComponent } from "./proyectos/proyectos.component";
     InicioBannerComponent,
     FooterComponent,
     ContactoComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    MiembrosComponent
 ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css',

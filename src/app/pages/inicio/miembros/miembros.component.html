@@ -1,1 +1,47 @@
-<p>miembros works!</p>,
+<div class="content-father">
+  <div class="header">
+    <h2 id="encabezado">EQUIPO</h2>
+    <div id="linea"></div>
+    <p id="ep">La unión de éxito</p>
+  </div>
+
+  <div *ngIf="cargandoDatos">Cargando datos...</div>
+
+  <div class="content-principal" *ngIf="!cargandoDatos && miembroSeleccionado">
+    <div class="content-sub">
+      <div class="content-video">
+        <video id="VideoM" width="220" height="220" controls>
+          <source [src]="miembroSeleccionado.video" type="video/mp4">
+          <source [src]="miembroSeleccionado.video" type="video/webm">
+          <source [src]="miembroSeleccionado.video" type="video/ogg">
+          Tu navegador/dispositivo no soporta el video.
+        </video>
+      </div>
+      <div class="content-text">
+        <p id="saludo">Hola</p>
+        <div class="identificacion">
+          <p id="nombre">Soy {{ miembroSeleccionado.nombre }}</p>
+          <p id="apodo">({{ miembroSeleccionado.apodo }})</p>
+        </div>
+        <p id="puesto">{{ miembroSeleccionado.puesto }}</p>
+        <p id="descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. {{ miembroSeleccionado.descripcion }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contenedor-miembros" *ngIf="!cargandoDatos && miembrosLista.length > 0">
+    <div class="botones" (click)="moverIzquierda()"><img src="img/rightbtn.svg"></div>
+    <div class="carrusel-wrapper">
+      <div class="carrusel">
+        <div class="miembro" *ngFor="let miembroSeleccionado of miembrosLista; trackBy: trackByMiembroId">
+          <img [src]="miembroSeleccionado.imagen" 
+               [alt]="'Esta es una foto de ' + miembroSeleccionado.nombre" 
+               class="imagen-circular" 
+               (click)="seleccionarMiembro(miembroSeleccionado)">
+        </div>
+      </div>
+    </div>
+    <div class="botones" (click)="moverDerecha()"><img src="/img/leftbtn.svg"></div>
+  </div>
+  
+</div>
