@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { MiembrosService } from '../../../services/miembros.service';
+import { DarkModeService } from '../../../services/dark-mode.service';
 
 interface Miembro {
   id: number;
@@ -26,7 +27,7 @@ export class MiembrosComponent implements AfterViewInit {
   miembroSeleccionado: Miembro | null = null;
   cargandoDatos: boolean = true; // Variable para indicar si los datos se están cargando
 
-  constructor(protected service: MiembrosService) {
+  constructor(protected service: MiembrosService, protected darkModeService: DarkModeService) {
     service.listar().subscribe({
       next: (respuesta: Miembro[]) => {
         console.log(respuesta);
@@ -77,10 +78,11 @@ export class MiembrosComponent implements AfterViewInit {
   carruselOffset = 0;
 
   moverDerecha() {
-    const visibleWidth = this.calcularCarruselVisible(); // Ancho visible del carrusel
+    const visibleWidth = this.calcularCarruselVisible();
   
-    if (this.carruselOffset <= this.calcularAnchoTotalCarrusel() - visibleWidth) {
-      this.carruselOffset += visibleWidth; 
+    // Nuevo cálculo basado en el ancho total del carrusel
+    if (this.carruselOffset + visibleWidth < this.calcularAnchoTotalCarrusel()) {
+      this.carruselOffset += visibleWidth;
     } else {
       this.carruselOffset = 0; // Reinicia al principio si llegamos al final
     }
@@ -91,7 +93,8 @@ export class MiembrosComponent implements AfterViewInit {
   moverIzquierda() {
     const visibleWidth = this.calcularCarruselVisible();
   
-    if (this.carruselOffset >= visibleWidth) {
+    // cálculo basado en el ancho total del carrusel
+    if (this.carruselOffset - visibleWidth >= 0) {
       this.carruselOffset -= visibleWidth;
     } else {
       this.carruselOffset = this.calcularAnchoTotalCarrusel() - visibleWidth; // Mueve al final
@@ -101,17 +104,24 @@ export class MiembrosComponent implements AfterViewInit {
   }
   
   calcularAnchoTotalCarrusel(): number {
-    const widthPerMember = 120; // Ajusta según el tamaño de tu .miembro (ancho + margin)
-    return this.miembrosLista.length * widthPerMember;
+    const carrusel = document.querySelector('.carrusel') as HTMLElement;
+    return carrusel.scrollWidth; // Retorna el ancho total real del contenido del carrusel
   }
-
+  
   aplicarTransform() {
     const carrusel = document.querySelector('.carrusel') as HTMLElement;
     carrusel.style.transform = `translateX(-${this.carruselOffset}px)`;
   }
-
+  
   calcularCarruselVisible(): number {
     const carruselWrapper = document.querySelector('.carrusel-wrapper') as HTMLElement;
     return carruselWrapper.offsetWidth;
   }
+  
+
+ //modo oscuro
+  getColorClass() {
+    return this.darkModeService.getDarkMode() ? 'color-dark' : 'color-light';
+  }
+
 }

@@ -10,7 +10,7 @@
   <div class="content-principal" *ngIf="!cargandoDatos && miembroSeleccionado">
     <div class="content-sub">
       <div class="content-video">
-        <video id="VideoM" width="220" height="220" controls>
+        <video id="VideoM" width="220" height="220" controls muted loop autoplay>
           <source [src]="miembroSeleccionado.video" type="video/mp4">
           <source [src]="miembroSeleccionado.video" type="video/webm">
           <source [src]="miembroSeleccionado.video" type="video/ogg">
@@ -30,7 +30,7 @@
   </div>
 
   <div class="contenedor-miembros" *ngIf="!cargandoDatos && miembrosLista.length > 0">
-    <div class="botones" (click)="moverIzquierda()"><img src="img/rightbtn.svg"></div>
+    <div class="botones" (click)="moverIzquierda()"><img src="/img/rightbtn.svg"></div>
     <div class="carrusel-wrapper">
       <div class="carrusel">
         <div class="miembro" *ngFor="let miembroSeleccionado of miembrosLista; trackBy: trackByMiembroId">
