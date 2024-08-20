@@ -60,6 +60,4 @@ export class ContactoComponent {
     this.isModalActived = false;
   }
 
-  
-
 }

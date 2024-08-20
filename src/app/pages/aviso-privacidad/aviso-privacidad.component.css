@@ -15,17 +15,5 @@
   .container {
     flex-direction: column;
     padding: 10rem 0;
-  }
-
-  
-}
-
-.color-dark {
-  background-color: #333!important;
-  color: #f4f4f4!important;
-}
-
-.color-light {
-  background-color: #f4f4f4!important;
-  color: #333!important;
+  } 
 }

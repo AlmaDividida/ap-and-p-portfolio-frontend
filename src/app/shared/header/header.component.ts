@@ -15,26 +15,28 @@ import { RouterModule } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-  visible: boolean;
+  dropdownActive: boolean;
   constructor(
     protected darkModeService: DarkModeService
   ) {
-    if (typeof window !== "undefined") {
-      this.visible = !(window.innerWidth < 768);
-   } else {
-      this.visible = true;
-    }
+    this.dropdownActive = false;
   }
 
   toggleDarkMode() {
     this.darkModeService.toggleDarkMode();
   }
 
-  getColorClass() {
-    return this.darkModeService.getDarkMode() ? 'color-dark' : 'color-light';
+  getDarkMode() {
+    return this.darkModeService.getDarkMode();
   }
 
-  toggleMenu() {
-    this.visible = !this.visible;
+  getBgColor() {
+    return this.getDarkMode() ? 'bg-dark ' : 'bg-light ';
   }
+  
+  toggleMenu() {
+    this.dropdownActive = !this.dropdownActive;
+  }
+
+  
 }

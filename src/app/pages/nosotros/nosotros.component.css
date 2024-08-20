@@ -89,19 +89,6 @@ h1, h2, h3, h4, h5, h6 {
   
 }
 
-
-
-
-.color-dark {
-  background-color: #333!important;
-  color: #f4f4f4!important;
-}
-
-.color-light {
-  background-color: #f4f4f4!important;
-  color: #333!important;
-}
-
 .history__section {
   img {
     width: 100%;

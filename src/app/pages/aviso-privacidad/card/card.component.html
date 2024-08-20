@@ -1,4 +1,4 @@
-<div class="card-content">
+<div class="card-content" [ngClass]="darkModeService.darkMode() ? 'color-light' : 'color-dark'">
   <div class="card-title">
     <h1>Aviso de privacidad</h1>
   </div>

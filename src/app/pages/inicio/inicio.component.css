@@ -2,7 +2,12 @@
   display: block;
 }
 
-.background {
-  background-color: #F4F4F4;
+.top {
+  padding: 1.5rem 0;
+  transition: all 0.3s;
 }
 
+.bottom {
+  padding: .5rem 0;
+  transition: all 0.3s;
+}

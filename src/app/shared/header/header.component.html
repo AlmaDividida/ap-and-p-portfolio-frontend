@@ -1,31 +1,74 @@
-<header 
-    [ngClass]="darkModeService.darkMode() ? 'color-light' : 'color-dark'"
-    class="header"
->
-    <div class="header-content">
-        <div class="logo">AP&P</div>
-
-        @if (!visible) {
-            <div class="icons">
-                <img class="" src="/img/bars-solid.svg">
-            </div>
-        }
-        @if (visible) {
+<div [ngClass]="!getDarkMode() ? 'color-dark' : 'color-light'" class="header slide-in-top container">
+    <div class="header__dropdown">
+        <a href="/" class="logo">
+            <div [ngClass]="getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-logo"></div>
+        </a>
+        <button class="menu_button" (click)="toggleMenu()">
+            <div [ngClass]="getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-menu"></div>
+        </button>
+    </div>
+    <div [ngClass]="dropdownActive ? getBgColor() + 'active' : getBgColor()" class="color-dark dropdown">
+        <div class="dropdown__header">
+            <a href="/" class="logo">
+                <div [ngClass]="!getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-logo"></div>
+            </a>
+            <button class="menu_button" (click)="toggleMenu()">
+                <div [ngClass]="!getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-close"></div>
+            </button>
+        </div>
+        <div class="dropdown__body">
             <nav class="navbar">
                 <ul class="nav">
-                    <li><a [routerLink]="['/routePath']" >INICIO</a></li>
-                    <li><a [routerLink]="['/nosotros']" >NOSOTROS</a></li>
-                    <li><a [routerLink]="['/routePath']" >SERVICIOS</a></li>
-                    <li><a [routerLink]="['/routePath']" >PROYECTOS</a></li>
-                    <li><a [routerLink]="['/routePath']" >EQUIPO</a></li>
-                    <li><a [routerLink]="['/routePath']" >CONTACTO</a></li>
+                    <li>
+                        <a [routerLink]="['/routePath']" >
+                            <div [ngClass]="!getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-home"></div>
+                            <span>INICIO</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/nosotros']" >
+                            <div [ngClass]="!getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-about"></div>
+                            <span>NOSOTROS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/routePath']" >
+                            <div [ngClass]="!getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-projects"></div>
+                            <span>PROYECTOS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/routePath']" >
+                            <div [ngClass]="!getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-services"></div>
+                            <span>SERVICIOS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/routePath']" >
+                            <div [ngClass]="!getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-team"></div>
+                            <span>EQUIPO</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/routePath']" >
+                            <div [ngClass]="!getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-contact"></div>
+                            <span>CONTACTO</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
-            <div class="night-mode-toggle">
-                <input type="checkbox" id="darkModeToggle" (change)="toggleDarkMode()">
-                <input type="checkbox" id="night-mode" (change)="toggleDarkMode()">
-                <label for="night-mode"></label>
+            <div class="night-mode">
+                <p>Modo Nocturno</p>
+                <div class="night-mode-toggle">
+                    <input type="checkbox" id="darkModeToggle" (change)="toggleDarkMode()">
+                    <input type="checkbox" id="night-mode" (change)="toggleDarkMode()">
+                    <label for="night-mode"></label>
+                </div>
             </div>
-        }
+        </div>
+        <div class="dropdown-footer">
+            <p>Todos los derechos reservados</p>
+            <p>AP&P S.A. de C.V. 2024</p>
+        </div>
     </div>
-</header>
+</div>

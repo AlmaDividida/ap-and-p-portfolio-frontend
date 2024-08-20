@@ -1,305 +1,84 @@
-.banner {
-  box-sizing: border-box;
-  padding: 40px;
-  background-size: auto;
-  position: relative;
-  background-position: bottom;
-  /*flex-direction: column; podria servirme si quiero usar flex*/
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  color: #F4F4F4;
-  margin: auto;
+:host {
+    display: block;
+    height: 100vh;
 }
 
-      @media(max-width:768px){
-        .banner {
-          
-          padding: 20px; 
-          
-         
-        }
-      }
+.banner__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
 
+    height: 100%;
 
-
-.banner-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: Roboto;
-  margin: 0 0 3% 0;
-}
-
-    @media(max-width:768px){
-      .banner-header {
+    .banner__text {
         display: flex;
-        flex-direction: column;  
-        align-items: flex-start; 
-        margin: 0;
-       
-      }
-    }
-
-
-
-
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: Ubuntu;
-  margin: 0 0 0 10%;
-}
-
-      @media(max-width:768px){
-        .logo {
-          margin-bottom: 5px; 
-        }
-      }
-
-
-      .navigation{
-        box-sizing: border-box;
-        margin: 0;
-      }
-
-
-.navigation ul {
-  align-items: flex-start;
-  display: flex;
-  list-style: none;
-  
-}
-    @media(max-width:768px){
-      .navigation ul {
-        
-          display: flex;
-          flex-direction: column; 
-          margin: 0;
-          text-align: left; 
-       
-         
-      }
-    }
-
-
-
-
-.navigation li {
-  margin: 0 2%;
- 
-}
-
-    @media(max-width:768px){
-      .navigation li {
-      margin: 5px 0;
-      }
-    }
-
-
-.navigation a {
-  text-decoration: none;
-  font-size: 1.1rem;
-  color: #fff;
-}
-
-.night-mode-toggle {
-  width: 50px;
-  height: 30px; 
-  padding: 5px;   
-  display: flex;  
-  align-items: center;
-  justify-content: center;
-  margin: 0 9%;
-}
-
-  @media(max-width:768px){
-    .night-mode-toggle {
-      position: absolute;
-      top: 15px; 
-      right: 10px; 
-    }
-  }
-
-
-
-.night-mode-toggle input[type="checkbox"] {
-  display: none;
-}
-
-.night-mode-toggle label {
-  width: 40px;
-  height: 20px;
-  background: #cccccc;
-  border-radius: 20px;
-  border: 1px solid #006DAD ;
-  position: relative;
-  cursor: pointer;
-  align-items: center;
-}
-
-.night-mode-toggle label::after {
-  content: '';
-  width: 18px;
-  height: 18px;
-  background: #e9e9e9;
-  border-radius: 50%;
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  transition: 0.3s;
-}
-
-.night-mode-toggle input:checked + label::after {
-  left: 21px;
-}
-
-.banner-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
-}
-
-    @media(max-width:768px){
-      .banner-content {
-        flex-direction: column; 
-        align-items: center; 
-        
-      }  
-    }
-
-.text-content, .image-content {
-  flex: 1; 
-  margin: 5% 3%;
-}
-
-    @media(max-width:768px){
-      .text-content, .image-content {
-        box-sizing: border-box;
-        margin: 20px auto; 
-        width: 100%;
-      }  
-    }
-
-.text-content {
-  
-  overflow: auto;
-  margin: 0 5%;
-
-}
-
-.text-content h1 {
-  font-size: 2.1rem;
-  font-family: Ubuntu;
-}
-
-.text-content p {
-  font-size: 1.1rem;
-  font-family: Roboto;
-  margin: 4% 0;
-}
-
-.contact-button {
-  padding: 7px 80px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-family: Roboto;
-  font-weight: 600;
-  
-}
-
-    @media(max-width:768px){
-      .contact-button {
-        padding: 7px 40px; 
-        width: 100%; 
+        flex-direction: column;
+        justify-content: start;
         text-align: center;
-      }
+        z-index: var(--z-index-10);
     }
 
-
-.image-content img {
-
-  width: 100%;
-  margin: 0 5% 0 0;
-}
-    @media(max-width:768px){
-      .image-content img {
-       margin: 0 auto; 
-      }
+    p.banner__text {
+        margin: 0 0 1rem 0;
     }
 
-
-
-.color-light {
-  a {
-    color: #f4f4f4!important;
-  }
-  label::after {
-    background-color: #f4f4f4!important;
-  }
-  .contact-button {
-    background-color: #f4f4f4;
-    color: #333;
-  }
+    .btn {
+        margin: 1rem 0;
+    }
 }
 
-.banner.color-light {
-  background-image: url("/img/back.svg"), linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%); /* Superponer la imagen SVG sobre el degradado */
-}
+@media screen and (min-width: 768px) {
+    .banner__content {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-auto-flow: column;
 
-.color-dark {
-  a {
-    color: #333!important;
-  }
-  label::after {
-    background-color: #333!important;
-  }
-  .contact-button {
-    background-color: #333;
-    color: #f4f4f4;
-  }
-  
-}
-.banner.color-dark{
-  background-image: url("/img/back-dark.svg"), linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%); /* Superponer la imagen SVG sobre el degradado */
+        .banner__text {
+            grid-column: 1 / 2;
+            text-align: start;
+            justify-content: center;
+        }
+
+        .banner__frame {
+            grid-column: 2 / 3;
+        }
+    }
 }
 
 
-@media (max-width: 1023px) {
-  .banner {
-      padding: 30px; 
-  }
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
 
-  
+@media screen and (min-width: 768px) {
+    .btn {
+        max-width: fit-content;
+        margin: 3rem 0
+    }
+    .banner__title {
+        font-size: 2.5rem;
+    }
+    p.banner__text {
+        font-size: 1.3rem;
+    }
+}
 
-  .logo {
-      margin: 0 0 0 2%; /
-  }
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: url('/img/inicio-banner/background.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: var(--z-index-0);
+}
 
-  .navigation ul {
-      align-items: flex-start;
-      display: flex;
-      list-style: none;
-      padding: 0 10px  0 30px;
-  }
-
-  .navigation li {
-      margin: 0 1%;
-  }
-
-  .night-mode-toggle {
-      margin: 0 10%; 
-  }
-
-
-
-  .text-content,.image-content {
-      flex: 1;
-      margin: 5% 3%; 
-  }
-
-
+@media screen and (min-width: 768px) {
+    .waves {
+        height: 100%;
+    }   
 }

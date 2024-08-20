@@ -1,9 +1,8 @@
 <div 
-    [ngClass]="darkModeService.darkMode() ? 'color-dark' : 'color-light'"
+    [ngClass]="darkModeService.darkMode() ? 'bg-dark' : 'bg-light'"
 >
-    <app-header/>
+    <app-header [ngClass]="darkModeService.darkMode() ? 'bg-light color-dark' : 'bg-dark color-light'"/>
     <div 
-        [ngClass]="darkModeService.darkMode() ? 'color-dark' : 'color-light'"
         class="container"
     >
         <app-card></app-card>

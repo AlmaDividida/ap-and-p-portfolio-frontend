@@ -1,5 +1,5 @@
-<div [ngClass]="darkModeService.darkMode() ? 'color-dark' : 'color-light'">
-  <app-header />
+<div [ngClass]="darkModeService.darkMode() ? 'bg-light color-dark' : 'bg-dark color-light'">
+  <app-header [ngClass]="darkModeService.darkMode() ? 'bg-light color-dark' : 'bg-dark color-light'"/>
     <div class="sobre-nosotros__seccion">
         <div class="hero__section">
             <div class="hero__content"></div>
