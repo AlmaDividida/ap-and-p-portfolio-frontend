@@ -1,165 +1,55 @@
 :host {
   display: block;
+  position: relative;
+  overflow: hidden;
 }
 
-.seccion{
-  background-color: #F4F4F4;
-  position: relative;
+.sobre_nosotros__content {
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+  flex-direction: column;
 }
 
-
-
-.tarjeta{
-  background: #FFF;
-  border-radius: 13px;
-  width: 795px;
-  padding: 45px;
-  margin: 10% 0;
-  display: flex;
-  justify-content: center; 
-  align-items: center;   
-
-
-
-}
-
-h2{
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 22.98px;
-  font-style: normal;
+.sobre_nosotros__card {
+  max-width: 800px;
   text-align: center;
-  text-transform: uppercase;
+  line-height: 1.25;
+  z-index: var(--z-index-20);
+  a {
+    color: var(--light-color)!important;
+  }
 }
 
-h2::after{
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%);
-  margin: 0 auto 20px;
-  margin-top: 10px;
-  margin-bottom: 40px;
-  border-radius: 2px;
+@media screen and (min-width: 768px) {
+  .sobre_nosotros__card {
+    text-align: left;
+    padding: 2rem 3rem;
+  }
 }
 
-p{
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 14.06px;
-}
-
-.boton{
+.sobre_nosotros__buttons {
   text-align: center;
+  .btn {
+    display: block;
+  }
 }
 
-button{
-  cursor: pointer;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 14.06px;
-  font-style: normal;
-  color: #FFF;
-  border: none;
-  border-radius: 8px;
-  height: 30px;
-  cursor: pointer;
-  width: 141px;
-  margin-top: 30px;
-  box-shadow: rgb(187, 185, 185) 0px 5px 6px;
-  background: rgb(0,109,173);
-  background: -moz-linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%);
-  background: -webkit-linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%);
-  background: linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#006dad",endColorstr="#00e6dc",GradientType=1);
+@media screen and (min-width: 768px) {
+  .sobre_nosotros__buttons {
+    .btn {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+  }  
 }
 
-img{
-  
+.sobre_nosotros__bg{
   position: absolute;
+  top: 0;
   left: 0;
-  display: flex;
-  justify-content: center; 
-  align-items: center;     
+  opacity: 0.25;
+  width: 100%;
+  z-index: var(--z-index-0);
 }
-
-.color-dark {
-  background-color: #333!important;
-  .tarjeta{
-    background: rgba(0, 0, 0, 0.2)!important;
-    color: #f4f4f4!important;
-    button{
-      box-shadow: rgb(35, 35, 35) 0px 5px 6px;
-    }
-  }
-}
-
-.color-light {
-  background-color: #f4f4f4!important;
-  .tarjeta{
-    color: #333!important;
-  }
-}
-
-
-  @media (max-width: 768px)  {
-  .tarjeta {
-    margin: 5%;
-    width: 90%; 
-    padding: 10% 10% 20% 10%; 
-    
-  }
-
-  h2 {
-    font-size: 1.6rem; 
-  }
-
-
-  p {
-    font-size: 1rem 
-  }
-
-
-  img {
-    width: 100%; 
-  
-    transform: translateX(-70%); 
-  }
-}
-
-    @media(max-width: 1023px){
-
-      .tarjeta{
-        
-        margin: 10% 5%;
-        flex-direction: column; 
-        position: relative;
-
-      }
-
-
-      h2 {
-        font-size: 1.6rem; 
-      }
-    
-    
-      p {
-        font-size: 1rem 
-      }
-
-      img {
-          
-          height: auto;
-          position: absolute; 
-          left: 0;
-          top: -20%;
-      }
-
-    }

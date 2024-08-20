@@ -630,6 +630,24 @@ body {
   box-shadow: var(--shadow-xl);
 }
 
+.section-tilte{
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%);
+    margin: 0 auto 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    border-radius: 2px;
+  }
+}
+
 /* ICONS */
 
 .icon {

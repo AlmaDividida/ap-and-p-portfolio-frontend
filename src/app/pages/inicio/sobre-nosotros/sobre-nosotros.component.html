@@ -1,17 +1,15 @@
-<div [className]="'seccion ' + getColorClass()">
-    
-    <div class="tarjeta" style="z-index: 2;">
-
-        <div class="texto-nosotros">
-            <h2>Sobre Nosotros</h2>
+<div class="sobre_nosotros__seccion">
+    <div class="sobre_nosotros__content container">
+        <div [ngClass]="getDarkMode() ? 'bg-dark color-light': 'bg-white color-dark'" class="sobre_nosotros__card card">
+            <h2 class="section-tilte">Sobre Nosotros</h2>
             <p>Somos una alianza de empresas expertas, dedicadas al desarrollo de paginas web y aplicaciones móviles, que busca digitalizar los sueños de sus clientes, pues convertir tu visión en una realidad digital efectiva y exitosa es nuestro objetivo.</p>
             <p>Nos esforzamos por superar las expectativas de nuestros clientes con cada proyecto, proporcionando soluciones que no solo son innovadoras, sino también funcionales y alineadas con tus objetivos.</p>
             <p>Contamos con expertos dedicados a todas las áreas que necesitas para tu éxito, cuyo lema es entregar un servicio de calidad.</p>
-        </div>
-
-        <div class="boton">
-            <button role="link" [routerLink]="['/nosotros']" >Conócenos</button>
+            <div class="sobre_nosotros__buttons">
+                <a class="btn bg-gradient-blue-270 color-light" [routerLink]="['/nosotros']" >Conócenos</a>
+            </div>
         </div>
     </div>
-    <img src="img/Group.svg" alt="">
 </div>
+
+<ng-lottie class="sobre_nosotros__bg" [options]="options" width="100%" height="100%"/>
