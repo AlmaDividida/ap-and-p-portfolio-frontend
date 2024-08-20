@@ -22,7 +22,7 @@
                 </form>
             </div>
             <div class="contact-image">
-                <img src="img/contact-image.png" alt="Contacto">
+                <ng-lottie [styles]="styles" [options]="optionsContacto" width="100%" height="100%" />
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@
         </div>
         <div class="mensaje_enviado__modal-body">
             <h2>Mensaje enviado</h2>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCOEXfUNu8TtVyUiL9XH9eV_Fi-d3PmiaunQ&s" alt="">
+            <ng-lottie [styles]="styles" [options]="optionsMessageSuccessfully" width="100%" height="100%" />
             <p>¡Gracias por tu mensaje! Nos pondremos en contacto contigo lo más pronto posible.</p>
             <button (click)="closeModal()" class="modal-button">Continuar</button>
         </div>
