@@ -2,10 +2,14 @@
   display: block;
   font-family: Roboto;
 }
+
 img {
   max-width: 100%;
 }
 
+.header {
+  padding: .25rem 0;
+}
 
 h1{
   font-family: "Ubuntu", sans-serif;

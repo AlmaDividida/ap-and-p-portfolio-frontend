@@ -1,4 +1,4 @@
-<div [ngClass]="!getDarkMode() ? 'color-dark' : 'color-light'" class="header slide-in-top container">
+<div [ngClass]="!getDarkMode() ? 'color-dark' : 'color-light'" class="header container">
     <div class="header__dropdown">
         <a href="/" class="logo">
             <div [ngClass]="getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-logo"></div>
@@ -20,7 +20,7 @@
             <nav class="navbar">
                 <ul class="nav">
                     <li>
-                        <a [routerLink]="['/routePath']" >
+                        <a [routerLink]="['/']" >
                             <div [ngClass]="!getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-home"></div>
                             <span>INICIO</span>
                         </a>
@@ -32,25 +32,25 @@
                         </a>
                     </li>
                     <li>
-                        <a [routerLink]="['/routePath']" >
+                        <a [routerLink]="['/']" fragment="proyectos" >
                             <div [ngClass]="!getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-projects"></div>
                             <span>PROYECTOS</span>
                         </a>
                     </li>
                     <li>
-                        <a [routerLink]="['/routePath']" >
+                        <a [routerLink]="['/']" fragment="servicios" >
                             <div [ngClass]="!getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-services"></div>
                             <span>SERVICIOS</span>
                         </a>
                     </li>
                     <li>
-                        <a [routerLink]="['/routePath']" >
+                        <a [routerLink]="['/']" fragment="equipo" >
                             <div [ngClass]="!getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-team"></div>
                             <span>EQUIPO</span>
                         </a>
                     </li>
                     <li>
-                        <a [routerLink]="['/routePath']" >
+                        <a [routerLink]="['/']" fragment="contacto" >
                             <div [ngClass]="!getDarkMode() ? 'bg-dark' : 'bg-light'" class="icon ic-contact"></div>
                             <span>CONTACTO</span>
                         </a>
