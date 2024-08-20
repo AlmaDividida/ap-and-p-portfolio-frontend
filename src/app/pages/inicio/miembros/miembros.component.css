@@ -1,9 +1,8 @@
 :host {
   display: block;
   font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem; 
 }
-
-
 
 .content-father {
   background-image: url(/img/backleft.svg), url(/img/backright.svg);
@@ -14,306 +13,131 @@
   margin: 0;
 }
 
-
-
-      @media(max-width:723px){
-        .content-father {
-    
-          background-size: 50%; 
-          background-position: relative;
-          padding-top:10vh ;
-        }
-      }
-
-              @media(max-width:1023px){
-
-                .content-father{
-                  background-size: 30%;
-                  height: 70vh;
-                }
-              }
-
-
-.header{
+.header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  text-align: center;align-items: center;
-  
-  }
-
-         @media(max-width:723px){
-           .header {
-             width: 100%;
-             text-align: center;
-             justify-content: center;
-             align-items: center;
-           }
-         }
-                @media(max-width:1023px){
-                  .header{
-                    width: 100%;
-                  }
-                }
-
-#encabezado{
-font-family: 'Ubuntu', sans-serif;
-margin-bottom: 0;
-font-size: 2.5rem;
-
+  text-align: center;
+  align-items: center;
 }
 
-        @media(maxi-width:723px){
-          #encabezado {
-            font-size: 2rem;
-            padding: 0;
-          }
-        }
-
-        
-#linea{
-width: 8%;
-height: 4px;
-background-image: linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%);
-margin-top: 2vh;
+#encabezado {
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 0;
+  font-size: 2.5rem; 
 }
 
-      @media(max-width:723px){
-        #linea {
-          width: 30%;
-          margin: 0 auto;
-        }        
-      }
-            @media(max-width:1023px){
-              #linea {
-                margin: 1vh 0 0 0;
-
-              }
-            }
-
-#ep{
-
-  font-size: 1rem;
-  margin:1% 0 0 0;
+#linea {
+  width: 8%;
+  height: 4px;
+  background-image: linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%);
+  margin-top: 2vh;
 }
 
+#ep {
+  font-size: 1rem; 
+  margin: 1% 0 0 0;
+}
 
 .content-principal {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   width: 100%;
-  height: 45vh; 
+  height: 45vh;
   margin: 0;
   text-align: center;
 }
 
-
-        @media(max-width:723px){
-          .content-principal {
-
-            flex-direction: column;
-            align-items: center;
-            height: auto;
-            margin-top: 5vh;
-          }
-        }
-
-                @media(max-width:1023px){
-                  .content-principal{
-                    margin: 0;
-                    height: 35vh;
-                  }
-                }
-
-                
-
 .content-sub {
   display: flex;
   flex-direction: row;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
-  width: 100%; 
-  margin: 0 auto; 
-}
-
-      @media(max-width:723px){
-        .content-sub {
-          flex-direction: column;
-          align-items: center;
-        }
-      }
-
-
-.content-video, .content-text {
-  flex: 1; 
-  max-width: 30%; 
-  box-sizing: border-box;
-  margin: 0%; 
+  width: 100%;
+  margin: 0 auto;
 }
 
 
-      @media(max-width:723px){
-            
-         .content-video,.content-text {
-          max-width: 100%;
-          margin: 10px 0;
-           text-align: center;
-           }
-      }
-
-              @media(max-width:1023px){
-
-              .content-video, .content-text{
-                max-width: 50%;
-              }
-
-              }
-
-
-.content-text #saludo{
-
+.content-text #saludo {
   font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem; /* Rem */
 }
 
-.content-text #apodo{
+.content-text #apodo, #nombre {
   font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem; /* Rem */
 }
-
-      @media(max-width:723px){
-        .content-text {
-          text-align: center; 
-        }
-      }
-
 
 .content-video {
-  margin-left:0%;
-  overflow: hidden; 
-  position: relative; 
-  width: 20%;
-  height: 30vh;
- 
+  flex: 1;
+  max-width: 25%; 
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+
 }
 
-
-      @media(max-width:723px){
-        .content-video {
-          display: flex;
-          justify-content: center; 
-          width: 100%;
-        }
-      }
-
 .content-video video {
-  margin-top: 0px;
-  width: 29vh;
-  height: 28vh;
+  width: 80%;
+  height: 100%;
   border-radius: 50%;
-  object-fit: cover; 
-  position: relative; 
+  object-fit: cover;
+  position: relative;
   border: 2px solid #00B8F1;
 }
 
-      @media(max-width:723px){
-
-          .content-video video {
-          margin: 0 auto;
-          }
-
-
+.content-text {
+  text-align: start;
+  justify-content: flex-start;
+  flex: 1;
+  max-width: 30%; 
+  box-sizing: border-box;
 }
 
-.content-text{
-text-align: start;
-}
-
-#saludo{
+#saludo {
   font-weight: 900;
-  font-size: 1.5rem;
+  margin: 0%;
+  text-align: start;
+}
+
+.identificacion {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem; /* Rem */
   margin: 0%;
 }
 
-.identificacion{
-display: flex;
-flex-direction: row;
-font-size: 1.5rem;
-margin: 0%;
+#nombre, #apodo {
+  margin: 0%;
 }
 
-
-        @media(max-width:723px){
-          #saludo, .identificacion {
-            text-align: center;
-            align-items: center;
-            width: 100%; 
-            display: block;
-          }
-        }
-
-#nombre, #apodo{
-margin: 0%;
-}
-
-        @media (max-width: 723px) {
-          #nombre, #apodo {
-            display: block;
-            margin: 0 auto;
-          }
-        }
-
-            @media(max-width:723px){
-              #nombre{
-                margin: 0;
-              }
-            }
-
-#apodo{
+#apodo {
   background-image: linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%);
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent; 
-  background-clip: text; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   color: transparent;
 }
 
-        @media(max-width:723px){
-          #apodo {margin: 0;
-          }
-        }
-
-#puesto{
-
-  font-size: 1.2rem;
-  margin: 0% 0 0 0;
+#puesto {
+  font-size: 1.5rem; 
+  margin: 10px 0 0 0;
   background-image: linear-gradient(90deg, rgba(0,109,173,1) 0%, rgba(0,184,241,1) 50%, rgba(0,230,220,1) 100%);
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent; 
-  background-clip: text; 
-
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: start;
 }
 
-        @media(max-width:723px){
-          #puesto{text-align: center;
-          }
-        }
-
-#descripcion{
-
-font-size: 1rem;
-margin: 0;
-margin-top: 3%;
-width:80% ;
-
+#descripcion {
+  font-size: 1rem; 
+  margin: 0;
+  margin-top: 3%;
+  width: 80%;
+  text-align: start;
 }
-
-        @media(max-width:723px){
-          #descripcion {
-            width: 90%;
-            margin: 0 auto;
-          }
-        }
-
 
 .contenedor-miembros {
   display: flex;
@@ -323,16 +147,8 @@ width:80% ;
   width: 80%;
   overflow: hidden;
   margin: 0 auto;
-  font-size: 1rem;
+  font-size: 1rem; 
 }
-
-        @media(max-width:723px){
-          .contenedor-miembros {
-            width: 100%;
-            justify-content: center;
-          }
-        
-        }
 
 .carrusel-wrapper {
   overflow: hidden;
@@ -340,14 +156,6 @@ width:80% ;
   display: flex;
   justify-content: center;
 }
-
-        @media(max-width:723px){
-          .carrusel-wrapper {
-            width: 80%;
-            justify-content: center;
-          }
-        
-        }
 
 .carrusel {
   display: flex;
@@ -367,7 +175,6 @@ width:80% ;
   border-radius: 50%;
 }
 
-
 .botones {
   margin: 0 0px 0 10px;
   cursor: pointer;
@@ -375,10 +182,192 @@ width:80% ;
 }
 
 .botones:hover {
-
   background-image: #20759c;
-  transform: scale(1.2); 
+  transform: scale(1.2);
+}
+
+/*para moviles*/
+@media (max-width: 723px) {
+
+  .content-principal {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-top: 5vh;
+  }
+
+  .content-sub {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-video,
+  .content-text {
+    max-width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .content-video {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .content-video video {
+    margin: 0 auto;
+  }
+
+  .content-text {
+    text-align: center;
+    display: contents;
+  }
+
+  #saludo,
+  .identificacion {
+    text-align: center;
+    width: 100%;
+    
+  }
+
+  #nombre, #apodo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #apodo{
+    text-align: center;
+    align-items: center;
+  }
+
+  .contenedor-miembros {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .carrusel-wrapper {
+    width: 80%;
+    justify-content: center;
+  }
+
+  .header {
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #encabezado {
+    font-size: 2rem;
+    padding: 0;
+  }
+
+  #linea {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  #descripcion {
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  .content-father {
+    background-size: 40%;
+    background-position: relative;
+    padding-top: 5vh;
+  }
+}
+
+/*para moviles/tabletas*/
+@media (max-width: 1023px) {
+  
+  .content-principal {
+    height: auto;
+    margin-top: 3vh;
+  }
+
+  .content-sub {
+    flex-direction: column;
+    align-items: center;
+  }
+
+ 
+
+  .content-video {
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+    margin: 15px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .content-video video {
+    margin: 0 auto;
+    width: inherit;
+    width: 60%; /* Ajusta el tamaño del video si es necesario */
+  
+  }
+
+  .content-text {
+    text-align: center;
+    max-width: 90%;
+    margin: 15px 0;
+  }
+
+  #saludo {
+    text-align: center;
+    width: 100%;
+  }
+
+  .identificacion {
+    justify-content: center;
+    width: 100%;
+  }
+
+  #puesto{
+    
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  #nombre, #apodo {
+    display: block;
+    margin: 0;
+  }
+
+  .contenedor-miembros {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .carrusel-wrapper {
+    width: 80%;
+    justify-content: center;
+  }
+
+
+  #encabezado {
+    font-size: 2.2rem;
+    margin: 10px auto;
+  }
+
+  #linea {
+    width: 30%;
+    margin: 0 auto;
+  }
+  
+  #descripcion {
+    width: 100%;
+    margin: 20px 0 0 0;
+    text-align: center;
+  }
+
+  .content-father {
+    padding-top: 10vh;
+  }
 }
 
 
- 
