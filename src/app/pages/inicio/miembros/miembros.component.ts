@@ -20,7 +20,7 @@ interface Miembro {
   styleUrl: './miembros.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MiembrosComponent implements AfterViewInit {
+export default class MiembrosComponent implements AfterViewInit {
   @ViewChild('videoM') videoM!: ElementRef;
   miembrosLista: Miembro[] = [];
   miembroSeleccionado: Miembro | null = null;

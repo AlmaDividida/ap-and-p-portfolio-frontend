@@ -12,7 +12,7 @@ import { DarkModeService } from '../../../services/dark-mode.service';
   styleUrl: './nues-adn.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NuesAdnComponent {
+export default class NuesAdnComponent {
   constructor(
     protected darkModeService: DarkModeService,
   ) {}
