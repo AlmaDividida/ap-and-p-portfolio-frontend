@@ -1,15 +1,37 @@
 <div class="sobre_nosotros__seccion">
-    <div class="sobre_nosotros__content container">
-        <div [ngClass]="getDarkMode() ? 'bg-dark color-light': 'bg-white color-dark'" class="sobre_nosotros__card card">
-            <h2 class="section-tilte">Sobre Nosotros</h2>
-            <p>Somos una alianza de empresas expertas, dedicadas al desarrollo de paginas web y aplicaciones móviles, que busca digitalizar los sueños de sus clientes, pues convertir tu visión en una realidad digital efectiva y exitosa es nuestro objetivo.</p>
-            <p>Nos esforzamos por superar las expectativas de nuestros clientes con cada proyecto, proporcionando soluciones que no solo son innovadoras, sino también funcionales y alineadas con tus objetivos.</p>
-            <p>Contamos con expertos dedicados a todas las áreas que necesitas para tu éxito, cuyo lema es entregar un servicio de calidad.</p>
-            <div class="sobre_nosotros__buttons">
-                <a class="btn bg-gradient-blue-270 color-light" [routerLink]="['/nosotros']" >Conócenos</a>
+  <div class="sobre_nosotros__content container">
+    <h2 class="section-tilte">Sobre Nosotros</h2>
+    <p class="section-text text-center">
+      ¿Sabias que somos una alianza entre empresas expertas en soluciones
+      tecnológicas?
+    </p>
+    <div class="sobre_nosotros__cards cards">
+        <div class="sobre_nosotros__card card bg-white border-xl">
+            <div class="card-content">
+                <p>
+                    Somos una alianza conformada por
+                    un equipo de expertos en desarrollo web y móvil, diseño, y estrategia
+                    digital, todos ellos comprometidos con tu éxito.
+                </p>
             </div>
         </div>
+        <div class="sobre_nosotros__frame">
+            <ng-lottie [options]="options" width="100%"></ng-lottie>
+        </div>
+        <div class="sobre_nosotros__card card bg-white border-xl">
+            <p>
+                Para nosotros cada proyecto es único, por ello nos enfocamos en comprender
+                tus necesidades y objetivos específicos.
+              </p>
+        </div>
     </div>
+    <p class="text-center">¿Quieres saber que nos hace diferente?</p>
+    <div class="sobre_nosotros__buttons text-center">
+      <a
+        class="btn bg-gradient-blue-270 color-light"
+        [routerLink]="['/nosotros']"
+        >Conócenos</a
+      >
+    </div>
+  </div>
 </div>
-
-<ng-lottie class="sobre_nosotros__bg" [options]="options" width="100%" height="100%"/>

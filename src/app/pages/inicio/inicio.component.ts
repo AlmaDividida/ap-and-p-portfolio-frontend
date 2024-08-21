@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
 import { SobreNosotrosComponent } from "./sobre-nosotros/sobre-nosotros.component";
-import { NuesAdnComponent } from "./nues-adn/nues-adn.component";
 import { InicioBannerComponent } from './inicio-banner/inicio-banner.component';
 import { FooterComponent } from "./footer/footer.component";
 import { ContactoComponent } from './contacto/contacto.component';
@@ -9,6 +8,7 @@ import { DarkModeService } from '../../services/dark-mode.service';
 import { ProyectosComponent } from "./proyectos/proyectos.component";
 import { MiembrosComponent } from "./miembros/miembros.component";
 import { HeaderComponent } from '../../shared/header/header.component';
+import { BannerParallaxComponent } from "../../shared/banner-parallax/banner-parallax.component";
 
 @Component({
   selector: 'app-inicio',
@@ -17,12 +17,12 @@ import { HeaderComponent } from '../../shared/header/header.component';
     CommonModule,
     HeaderComponent,
     SobreNosotrosComponent,
-    NuesAdnComponent,
     InicioBannerComponent,
     FooterComponent,
     ContactoComponent,
     ProyectosComponent,
     MiembrosComponent,
+    BannerParallaxComponent
 ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css',

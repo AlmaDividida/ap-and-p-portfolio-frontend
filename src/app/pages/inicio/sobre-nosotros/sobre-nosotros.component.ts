@@ -23,7 +23,7 @@ export class SobreNosotrosComponent {
     protected darkModeService: DarkModeService,
   ) {
     this.options = {
-      path: 'https://lottie.host/2fdd211e-8e4a-40a7-b260-87353994798b/EgwU6kNLCc.json',
+      path: "https://lottie.host/c3d71456-c9f2-476f-a92d-5c6ed13746fe/uxFkbReAJ9.json",
     };
   }
 
