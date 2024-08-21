@@ -1,28 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
 import { SobreNosotrosComponent } from "./sobre-nosotros/sobre-nosotros.component";
-import { NuesAdnComponent } from "./nues-adn/nues-adn.component";
 import { InicioBannerComponent } from './inicio-banner/inicio-banner.component';
 import { FooterComponent } from "./footer/footer.component";
-import { ContactoComponent } from './contacto/contacto.component';
 import { DarkModeService } from '../../services/dark-mode.service';
-import { ProyectosComponent } from "./proyectos/proyectos.component";
-import { MiembrosComponent } from "./miembros/miembros.component";
 import { HeaderComponent } from '../../shared/header/header.component';
+import ContactoComponent from './contacto/contacto.component';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
   imports: [
+    ContactoComponent,
     CommonModule,
     HeaderComponent,
     SobreNosotrosComponent,
-    NuesAdnComponent,
     InicioBannerComponent,
     FooterComponent,
-    ContactoComponent,
-    ProyectosComponent,
-    MiembrosComponent,
 ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css',
@@ -38,6 +32,7 @@ export default class InicioComponent {
   }
 
   @HostListener("window:scroll", ["$event"])
+
   onWindowScroll() {
     let pos = (document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.offsetHeight;
     let max = document.documentElement.scrollHeight;

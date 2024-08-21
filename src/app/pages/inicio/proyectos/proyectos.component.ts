@@ -11,4 +11,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './proyectos.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProyectosComponent { }
+export default class ProyectosComponent { }

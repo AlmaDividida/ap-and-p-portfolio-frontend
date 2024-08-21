@@ -19,7 +19,7 @@ import { AnimationOptions, LottieComponent } from 'ngx-lottie';
   styleUrl: './contacto.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactoComponent { 
+export default class ContactoComponent { 
   isModalActived: boolean = false;
   optionsContacto: AnimationOptions;
   optionsMessageSuccessfully: AnimationOptions;
