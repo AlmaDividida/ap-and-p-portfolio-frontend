@@ -6,6 +6,7 @@ import { FooterComponent } from "./footer/footer.component";
 import { DarkModeService } from '../../services/dark-mode.service';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { BannerParallaxComponent } from "../../shared/banner-parallax/banner-parallax.component";
+import ContactoComponent from './contacto/contacto.component';
 
 @Component({
   selector: 'app-inicio',
@@ -16,6 +17,7 @@ import { BannerParallaxComponent } from "../../shared/banner-parallax/banner-par
     SobreNosotrosComponent,
     InicioBannerComponent,
     FooterComponent,
+    ContactoComponent,
     BannerParallaxComponent
 ],
   templateUrl: './inicio.component.html',
