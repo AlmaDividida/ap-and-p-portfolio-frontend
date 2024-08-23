@@ -3,7 +3,7 @@
 }
 
 .seccion-nues-adn{
-  background-color: #F4F4F4;
+  margin-top: 100px;
 }
 
 .barra{
@@ -41,7 +41,9 @@ p{
 
 .features{
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  flex-wrap: nowrap;
+  overflow: scroll;
   align-items: center;
   clear: both;
   height: 450px;
@@ -51,6 +53,15 @@ p{
   background-repeat: no-repeat;
   padding: 0px 100px;
   /*border: 1px solid #ccc;*/
+}
+
+@media screen and (min-width: 768px){
+  .features{
+    padding: 0px 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
 }
 
 .subtitulo{
@@ -67,7 +78,14 @@ p{
   text-align: center;
   width: 15%;
   margin-top: 100px;
+  flex: 0 0 calc(80% - 2rem);
   /*border: 1px solid #912828;*/
+}
+
+@media screen and (min-width: 768px){
+  .tarjeta{
+    flex: 0 0 calc(20% - 2rem);
+  }
 }
 
 .img-tarjeta{

@@ -16,8 +16,4 @@ export default class NuesAdnComponent {
   constructor(
     protected darkModeService: DarkModeService,
   ) {}
-
-  getColorClass() {
-    return this.darkModeService.getDarkMode() ? 'color-dark' : 'color-light';
-  }
 }

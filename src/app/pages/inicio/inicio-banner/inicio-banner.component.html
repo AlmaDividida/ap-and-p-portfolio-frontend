@@ -1,12 +1,14 @@
-<div [ngClass]="getDarkMode() ? 'color-dark' : 'color-light'" class="banner__content container">
-    <div class="banner__frame fade-in">
-        <iframe src="https://lottie.host/embed/792f3190-ea67-4d7e-b736-1c74b88a58f6/IhpDIl50x7.json"></iframe>
+<div [ngClass]="darkModeService.getDarkModeClass()" class="banner">
+    <div class="banner__content container">
+        <div class="banner__frame fade-in">
+            <iframe src="https://lottie.host/embed/ad43bcf6-c6c6-4e77-9319-7414a6b42806/aKsq12CEQs.json"></iframe>
+        </div>
+        <div class="banner__text slide-in-elliptic-left-fwd">
+            <h1 class="banner__title">¿Te interesa el mundo digital?</h1>
+            <p class="banner__text">Descubre todos los servicios que ofrecemos para impulsar tu negocio</p>
+            <p class="banner__text">¡No te confirmes con menos!</p>
+            <a class="btn btn-glass" routerLink="/" fragment="contacto">Contáctanos</a>
+        </div>
     </div>
-    <div class="banner__text slide-in-elliptic-left-fwd">
-        <h1 class="banner__title">¿Te interesa el mundo digital?</h1>
-        <p class="banner__text">Descubre todos los servicios que ofrecemos para impulsar tu negocio</p>
-        <p class="banner__text">¡No te confirmes con menos!</p>
-        <a class="btn btn-glass" routerLink="/" fragment="contacto">Contáctanos</a>
-    </div>
+    <div class="waves"></div>
 </div>
-<div class="waves"></div>

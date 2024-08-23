@@ -44,19 +44,10 @@ export default class ContactoComponent {
       loop: false,
     };
 
-
     this.styles = {
       width: '100%',
       height: '100%',
     };
-  }
-
-  getColorClass() {
-    return this.darkModeService.getDarkMode() ? 'color-dark' : 'color-light';
-  }
-  
-  getDarkMode() {
-    return this.darkModeService.getDarkMode();
   }
 
   sendContactForm() : void {

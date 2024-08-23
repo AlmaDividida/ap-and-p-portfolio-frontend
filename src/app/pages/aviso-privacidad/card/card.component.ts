@@ -17,8 +17,4 @@ export class CardComponent {
     protected darkModeService: DarkModeService,
   ) {
   }
-
-  getDarkMode(): boolean {
-    return this.darkModeService.getDarkMode();
-  }
 }

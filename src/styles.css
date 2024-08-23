@@ -11,11 +11,13 @@
   --white-color: #FFFFFF;
   --black-color: #000000;
 
+  --95-black-color: #00000095;
   --80-black-color: #00000080;
   --60-black-color: #00000060;
   --40-black-color: #00000040;
   --20-black-color: #00000020;
   
+  --95-white-color: #FFFFFF95;
   --80-white-color: #FFFFFF80;
   --60-white-color: #FFFFFF60;
   --40-white-color: #FFFFFF40;
@@ -326,44 +328,26 @@ body {
 
 .color-dark-blue {
   color: var(--dark-blue-color);
-  a {
-    color: var(--dark-blue-color);
-  }
 }
 
 .color-light-blue {
   color: var(--light-blue-color);
-  a {
-    color: var(--light-blue-color);
-  }
 }
 
 .color-dark {
   color: var(--dark-color)!important;
-  p, a, .icon {
-    color: var(--dark-color)!important;
-  }
 }
 
 .color-light {
   color: var(--light-color)!important;
-  p, a, .icon {
-    color: var(--light-color)!important;
-  }
 }
 
 .color-black {
   color: var(--black-color);
-  p, a, .icon {
-    color: var(--black-color);
-  }
 }
 
 .color-white {
   color: var(--white-color);
-  p, a, .icon {
-    color: var(--white-color);
-  }
 }
 
 .bg-gradient-blue-0 {
@@ -417,6 +401,7 @@ body {
 .bg-gradient-blue-animation {
 	-webkit-animation: bg-gradient-blue-animation 5s linear infinite alternate both;
 	        animation: bg-gradient-blue-animation 5s linear infinite alternate both;
+          transition: all 0.3s ease;
 }
 
  @-webkit-keyframes bg-gradient-blue-animation {
@@ -435,6 +420,22 @@ body {
     background: var(--dark-blue-color);
   }
 }
+@-webkit-keyframes bg-dark-animation {
+  0% {
+    background: var(--light-color);
+  }
+  100% {
+    background: var(--dark-color);
+  }
+}
+@keyframes bg-dark-animation {
+  0% {
+    background: var(--light-color);
+  }
+  100% {
+    background: var(--dark-color);
+  }
+}
 
 .btn {
   display: inline-block;
@@ -444,6 +445,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   transition: 0.3s ease;
+  box-shadow: var(--shadow-md);
 }
 
 .btn-dark-blue {
@@ -648,6 +650,11 @@ body {
   }
 }
 
+.section-text {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 /* ICONS */
 
 .icon {
@@ -844,3 +851,44 @@ body {
   }
 }
 
+.dark-mode {
+  background-color: var(--dark-color)!important;
+  color: var(--light-color)!important;
+  .dropdown.active {
+    background: var(--dark-color)!important;
+  }
+  * {
+    color: var(---color)!important;
+  }
+
+  .icon {
+    background: var(--light-color)!important;
+  }
+
+  .nav {
+    a,
+    button,
+    a span {
+      color: var(--80-white-color)!important;
+      .icon {
+        background: var(--80-white-color)!important;
+      }
+    }
+    a:hover {
+      color: var(--white-color)!important;
+      * {
+        color: var(--white-color)!important;
+      }
+      .icon {
+        background: var(--white-color)!important;
+      }
+    }
+  }
+
+  .bg-gradient-blue-animation {
+    -webkit-animation: bg-dark-animation 5s linear infinite alternate both!important;
+    animation: bg-dark-animation 5s linear infinite alternate both!important;
+  }
+  
+  transition: all 0.3s ease;
+}

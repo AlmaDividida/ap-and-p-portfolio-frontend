@@ -4,22 +4,26 @@ import { Injectable, signal, WritableSignal } from '@angular/core';
   providedIn: 'root'
 })
 export class DarkModeService {
-  darkMode: WritableSignal<boolean>;
+  darkModeEnabled: WritableSignal<boolean>;
 
   constructor() {
-    this.darkMode = signal(false);
+    this.darkModeEnabled = signal(false);
   }
 
   toggleDarkMode(): void {
-    this.darkMode.update((prev) => !prev);
+    this.darkModeEnabled.update((prev) => !prev);
   }
 
-  setDarkMode(value: boolean): void {
-    this.darkMode.update(() => value);
+  enableDarkMode(value: boolean): void {
+    this.darkModeEnabled.update(() => value);
   }
 
-  getDarkMode(): boolean {
-    return this.darkMode();
+  isDarkModeEnabled(): boolean {
+    return this.darkModeEnabled();
+  }
+
+  getDarkModeClass(): string {
+    return this.isDarkModeEnabled() ? 'dark-mode' : '';
   }
 
 }

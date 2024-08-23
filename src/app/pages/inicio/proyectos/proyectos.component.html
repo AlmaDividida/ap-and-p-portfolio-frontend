@@ -1,37 +1,37 @@
-<div class="seccion-proyectos">
+<div class="seccion-proyectos container">
     <div>
         <h2>proyectos</h2>
-        <p align="center">Inspiración para tu próximo proyecto</p>
+        <p class="text-center">Inspiración para tu próximo proyecto</p>
     </div>
     <div>
         <div class="botones">
-            <button class="boton boton-activo">Ver Todos</button>
-            <button class="boton ">Desarrollo Web</button>
-            <button class="boton ">Desarrollo Móvil</button>
+            @for ( categoria of categorias; track $index) {
+                <button [ngClass]="selected==categoria?'boton-activo':''" class="boton" (click)="filtrarPorCategoria(categoria)">{{ categoria.descripcion }}</button>
+            }
         </div>
         <div class="contenedor-carpeta">
             <div class="carpeta-fondo">
                 <div class="carpeta">
-                    @for (celda of [1,2,3,4,5,6]; track $index) {
-                        <div class="celda">
+                    @for (proyecto of proyectos; track $index) {
+                        <a [href]="proyecto.url" target="_blank" class="celda">
                             <div class="img-celda">
-                                <img class="img" src="img/image 11.png" alt="">
+                                <img class="img" [src]="proyecto.imagen" [alt]="proyecto.titulo">
                             </div>
                             <div class="titulo-celda">
-                                <p class="nombre">Proyecto #1</p>
+                                <p class="nombre">{{ proyecto.titulo }}</p>
                             </div>
-                            <div class="etiqueta">
-                                Móvil
+                            <div [ngClass]="'etiqueta-' + proyecto.categoria?.toLowerCase()" class="etiqueta">
+                                {{ proyecto.categoria }}
                             </div>
-                        </div>
+                        </a>
                     }
                 </div>
-                <div class="botones-circulo">
+                <!-- <div class="botones-circulo">
                     <button class="boton-circulo boton-circulo-activo"></button>
                     @for (boton of [1,2,3,4]; track $index) {
                         <button class="boton-circulo"></button>
                     }
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

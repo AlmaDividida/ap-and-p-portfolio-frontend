@@ -12,21 +12,8 @@ import { HeaderComponent } from '../../../shared/header/header.component';
   styleUrls: ['./inicio-banner.component.css']
 })
 export class InicioBannerComponent {
-
-
   constructor(
     protected darkModeService: DarkModeService
   ) {}
 
-  toggleDarkMode() {
-    this.darkModeService.toggleDarkMode();
-  }
-
-  getDarkMode() {
-    return this.darkModeService.getDarkMode();
-  }
-
-  test() {
-    console.log("Funciona el boton :D")
-  }
 }

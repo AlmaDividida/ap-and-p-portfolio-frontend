@@ -26,8 +26,4 @@ export class SobreNosotrosComponent {
       path: "https://lottie.host/c3d71456-c9f2-476f-a92d-5c6ed13746fe/uxFkbReAJ9.json",
     };
   }
-
-  getDarkMode() {
-    return this.darkModeService.getDarkMode();
-  }
 }

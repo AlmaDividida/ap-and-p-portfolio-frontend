@@ -1,11 +1,8 @@
-<div 
-    [ngClass]="darkModeService.darkMode() ? 'bg-dark' : 'bg-light'"
->
-    <app-header [ngClass]="darkModeService.darkMode() ? 'bg-light color-dark' : 'bg-dark color-light'"/>
+<div>
+    <app-header class="bg-dark-blue header"/>
     <div 
         class="container"
     >
         <app-card></app-card>
     </div>
-    <app-footer/>
 </div>

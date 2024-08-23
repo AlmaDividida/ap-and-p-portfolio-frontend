@@ -1,4 +1,8 @@
 :host {
+    display: block;
+}
+
+.banner {
     position: relative;
     display: block;
     height: 100vh;
@@ -17,6 +21,7 @@
         justify-content: start;
         text-align: center;
         z-index: var(--z-index-10);
+        color: var(--light-color);
     }
 
     p.banner__text {
@@ -24,13 +29,14 @@
     }
 
     .btn {
+        color: var(--light-color);
         margin: 1rem 0;
     }
 }
 
 @media screen and (min-width: 768px) {
     .banner__content {
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1.5fr;
         grid-template-rows: 1fr;
         grid-auto-flow: column;
 

@@ -1,0 +1,66 @@
+:host {
+  display: block;
+}
+
+/* Gradient mixin converted to pure CSS */
+.white-gradient {
+  background: linear-gradient(to right, var(--light-color) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+@keyframes scroll {
+  0% { 
+    transform: translateX(0); 
+  }
+  100% { 
+    transform: translateX(calc(-250px * 7)); 
+  }
+}
+
+/* Styling */
+.slider {
+  height: 100px;
+  margin: 2rem auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .slider {
+    max-width: 100%;
+  }
+  
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, var(--light-color) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slide {
+  height: 100px;
+  width: 250px;
+}
+

@@ -1,0 +1,11 @@
+<div class="container">
+	<div class="slider">
+		<div class="slide-track">
+			@for (marca of marcas; track marca.id) {
+				<div class="slide">
+					<img [src]="marca.logo" height="100" [alt]="marca.name" />
+				</div>
+			}
+		</div>
+	</div>
+</div>

@@ -60,7 +60,7 @@ h2::after{
     padding: 10px 70px;
     margin-right: 10px;
     border: none;
-    background-color: white;
+    background-color: var(--white-color);
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     font-weight: 500;
@@ -82,7 +82,7 @@ h2::after{
   .boton-activo {
     background-color: #0092CF;
     font-weight: 300;
-    color: white;
+    color: var(--white-color);
   }
 
   .boton-activo:hover {
@@ -92,6 +92,7 @@ h2::after{
 
 
 .contenedor-carpeta{
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,18 +100,26 @@ h2::after{
   padding-bottom: 75px;
 
   .carpeta-fondo{
+    width: 100%;
     background: white;
     border-top-right-radius: 50px;
 
     .carpeta{
+      padding: 2rem;
       display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      flex-wrap: wrap;
-      background: white;
-      border-top-right-radius: 50px;
-      width: 1400px;
-      padding-top: 50px;
+      flex-direction: column;
+      overflow-x: scroll;
+      background: var(--white-color);
+      border-top-right-radius: 1rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      .carpeta {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        flex-direction: row;
+      }
+      
     }
   }
 }
@@ -118,15 +127,15 @@ h2::after{
 .celda {
   position: relative;
   overflow: hidden;
-
   cursor: pointer;
-  flex-basis: 100%; 
   background-color: #F4F4F4;
   border-radius: 10px;
   margin-bottom: 20px;
-
   p {
     margin-top: 10px;
+  }
+  .titulo-celda p{
+    color: var(--dark-color)!important;
   }
 }
 
@@ -145,28 +154,35 @@ h2::after{
 }
 
 .etiqueta {
-  background-color: #0092CF;
-  padding: 4px 30px;
+  text-align: center;
+  width: 5rem;
+  padding: 8px 30px;
   text-transform: uppercase;
   font-weight: 400;
-  color: white;
+  color: var(--white-color);
   font-family: "Roboto", sans-serif;
 
   position: absolute;
-  bottom: 10px;
-  right: -30px;
+  top: 80%;
+  left: 70%;
+  transform: translate(-50%, -50%);
   transform: rotate(-45deg);
+}
 
+.etiqueta-web {
+  background: var(--gradient-blue-270);
+}
+
+.etiqueta-diseño {
+  background: var(--light-blue-color);
 }
 
 .img-celda {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  margin: 30px 20px 0 20px;
   img {
-    width: 350px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
