@@ -20,8 +20,12 @@
         flex-direction: column;
         justify-content: start;
         text-align: center;
-        z-index: var(--z-index-10);
         color: var(--light-color);
+    }
+
+    .banner__frame, .banner__text {
+        z-index: var(--z-index-10);
+        z-index: var(--z-index-10);
     }
 
     p.banner__text {
@@ -65,20 +69,17 @@
     }
 }
 
-.waves {
+.wave_1, .wave_2 {
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     left: 0;
     width: 100%;
-    height: 50%;
-    background: url('/img/inicio-banner/background.svg') no-repeat;
-    background-size: cover;
-    background-position: center;
+}
+
+.wave_1 {
     z-index: var(--z-index-0);
 }
 
-@media screen and (min-width: 768px) {
-    .waves {
-        height: 100%;
-    }   
+.wave_2 {
+    z-index: var(--z-index-1);
 }

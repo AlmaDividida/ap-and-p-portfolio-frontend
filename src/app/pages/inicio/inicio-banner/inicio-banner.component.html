@@ -1,14 +1,18 @@
 <div [ngClass]="darkModeService.getDarkModeClass()" class="banner">
     <div class="banner__content container">
         <div class="banner__frame fade-in">
-            <iframe src="https://lottie.host/embed/ad43bcf6-c6c6-4e77-9319-7414a6b42806/aKsq12CEQs.json"></iframe>
+            <app-lottie-lazy-component [options]="options" [isInView]="true"></app-lottie-lazy-component>
         </div>
         <div class="banner__text slide-in-elliptic-left-fwd">
             <h1 class="banner__title">¿Te interesa el mundo digital?</h1>
             <p class="banner__text">Descubre todos los servicios que ofrecemos para impulsar tu negocio</p>
-            <p class="banner__text">¡No te confirmes con menos!</p>
+            <p class="banner__text">¡No te conformes con menos!</p>
             <a class="btn btn-glass" routerLink="/" fragment="contacto">Contáctanos</a>
         </div>
     </div>
-    <div class="waves"></div>
+    <div class="waves">
+        <img class="wave_1" src="img/inicio-banner/wave_animated.svg" alt="">
+        <!-- <img class="wave_1" src="img/inicio-banner/wave_1.svg" alt="Efecto de onda">
+        <img class="wave_2" src="img/inicio-banner/wave_2.svg" alt="Efecto de onda"> -->
+    </div>
 </div>
