@@ -23,7 +23,8 @@ export class LottieLazyComponent implements AfterViewInit {
   options: AnimationOptions = {};
 
   ngAfterViewInit() {
-    if (this.lottieContainer) {
+    // Verificación de existencia de lottieContainer y de IntersectionObserver
+    if (this.lottieContainer && typeof IntersectionObserver !== 'undefined') {
       const observer = new IntersectionObserver(entries => {
         if (entries[0].isIntersecting) {
           this.isInView = true;
@@ -32,6 +33,9 @@ export class LottieLazyComponent implements AfterViewInit {
       });
 
       observer.observe(this.lottieContainer.nativeElement);
+    } else {
+      // Opcional: Manejo en caso de que IntersectionObserver no esté disponible
+      console.warn('IntersectionObserver is not supported or lottieContainer is undefined');
     }
   }
 }
