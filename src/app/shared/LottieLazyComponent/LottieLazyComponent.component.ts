@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import { AnimationOptions, LottieComponent } from 'ngx-lottie';
 
 @Component({
@@ -14,28 +14,33 @@ import { AnimationOptions, LottieComponent } from 'ngx-lottie';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
-export class LottieLazyComponent implements AfterViewInit {
-  @ViewChild('lottieContainer', { static: false }) lottieContainer!: ElementRef;
+export class LottieLazyComponent implements OnInit {
+  @ViewChild('lottieContainer') lottieContainer!: ElementRef;
   @Input()
   isInView = false;
 
   @Input()
   options: AnimationOptions = {};
 
-  ngAfterViewInit() {
-    // Verificación de existencia de lottieContainer y de IntersectionObserver
-    if (this.lottieContainer && typeof IntersectionObserver !== 'undefined') {
-      const observer = new IntersectionObserver(entries => {
-        if (entries[0].isIntersecting) {
-          this.isInView = true;
-          observer.disconnect();
-        }
-      });
+  ngOnInit() {
+    this.checkVisibility();
+  }
 
-      observer.observe(this.lottieContainer.nativeElement);
-    } else {
-      // Opcional: Manejo en caso de que IntersectionObserver no esté disponible
-      console.warn('IntersectionObserver is not supported or lottieContainer is undefined');
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    this.checkVisibility();
+  }
+
+  private checkVisibility() {
+    if (this.lottieContainer) {
+      const rect = this.lottieContainer.nativeElement.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      
+      if (rect.top <= windowHeight && rect.bottom >= 0) {
+        this.isInView = true;
+      } else {
+        this.isInView = false;
+      }
     }
   }
 }

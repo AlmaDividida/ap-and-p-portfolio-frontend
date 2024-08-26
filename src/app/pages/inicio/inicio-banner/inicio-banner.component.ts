@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DarkModeService } from '../../../services/dark-mode.service';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../../../shared/header/header.component';
-import { AnimationOptions } from 'ngx-lottie';
+import { AnimationOptions, LottieComponent } from 'ngx-lottie';
 import { LottieLazyComponent } from '../../../shared/LottieLazyComponent/LottieLazyComponent.component';
 
 @Component({
@@ -15,6 +15,7 @@ import { LottieLazyComponent } from '../../../shared/LottieLazyComponent/LottieL
     HeaderComponent,
     RouterModule,
     LottieLazyComponent,
+    LottieComponent
 ],
   templateUrl: './inicio-banner.component.html',
   styleUrls: ['./inicio-banner.component.css']
@@ -27,6 +28,7 @@ export class InicioBannerComponent {
   ) {
     this.options = {
       path: 'lotties/banner.json',
+      loop: false
     };
   }
 

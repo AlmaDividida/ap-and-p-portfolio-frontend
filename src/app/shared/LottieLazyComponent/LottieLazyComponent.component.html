@@ -1,3 +1,8 @@
-<div #lottieContainer>
-    <ng-lottie *ngIf="isInView" [options]="options"></ng-lottie>
+<div class="square-container" #lottieContainer>
+    <div *ngIf="isInView; else placeholder" class="square-content">
+        <ng-lottie [options]="options"></ng-lottie>
+    </div>
+    <ng-template #placeholder>
+      <div class="placeholder"></div>
+    </ng-template>
 </div>

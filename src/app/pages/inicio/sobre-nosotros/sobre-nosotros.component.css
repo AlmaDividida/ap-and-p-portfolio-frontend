@@ -17,76 +17,49 @@
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 1rem;
   margin: 4rem 0;
 }
 
-.sobre_nosotros__card {
-  max-width: 250px;
-  position: relative;
-}
-
-.sobre_nosotros__cards {
-  margin: 1rem auto 3rem auto!important;
-}
-
-@media screen and (min-width: 768px) {
-  .sobre_nosotros__cards {
-    margin: 0 auto!important;
-  }
-}
-
-.sobre_nosotros__frame {
-  width: 50%;
-  margin: 0 auto;
-}
 
 @media screen and (min-width: 768px) {
   .cards {
     grid-template-columns: 1fr 2fr 1fr;
   }
-
-  .sobre_nosotros__card {
-    max-width: auto;
-    margin: 3rem 0;
-    padding: 1rem 2rem;
-    height: fit-content;
-  }
-
-  .sobre_nosotros__frame {
-    width: 80%;
-  }
 }
 
-.sobre_nosotros__card:nth-child(1) {
-  margin-left: auto;
+.sobre_nosotros__card:nth-child(1) .card,
+.sobre_nosotros__card:nth-child(3) .card {
+  position: relative;
 }
 
-.sobre_nosotros__card:nth-child(1)::after,
-.sobre_nosotros__card:nth-child(3)::after {
+.sobre_nosotros__card:nth-child(1) .card::after,
+.sobre_nosotros__card:nth-child(3) .card::after {
   position: absolute;
   content: '';
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #fff;
-  /* background-color: var(--light-color)!important; */
+  background-color: var(--white-color);
 }
 
-.sobre_nosotros__card:nth-child(1)::after {
+.sobre_nosotros__card:nth-child(1) .card::after {
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   bottom: -1.5rem;
   left: 1rem;
 }
 
-.sobre_nosotros__card:nth-child(3)::after {
+.sobre_nosotros__card:nth-child(3) .card::after {
   clip-path: polygon(0 100%, 100% 100%, 50% 0);
   top: -1.5rem;
   right: 1rem;
 }
 
 @media screen and (min-width: 768px) {
-  .sobre_nosotros__card:nth-child(1)::after {
+  .sobre_nosotros__card .card{
+    margin-top: 25%;
+  }
+
+  .sobre_nosotros__card:nth-child(1) .card::after {
     clip-path: polygon(0 0, 100% 50%, 0 100%);
     left: auto;
     bottom: auto;
@@ -95,7 +68,7 @@
     transform: translateY(-50%);
   }
 
-  .sobre_nosotros__card:nth-child(3)::after {
+  .sobre_nosotros__card:nth-child(3) .card::after {
     clip-path: polygon(100% 0, 0 50%, 100% 100%);
     right: auto;
     top: auto;
