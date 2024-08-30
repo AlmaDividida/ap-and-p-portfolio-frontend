@@ -1,0 +1,21 @@
+<div class="miembros__menu">
+    <div class="menu__control menu__previous">
+        <button class="menu__button">
+            <div class="icon ic-left"></div>
+        </button>
+    </div>
+    <div class="menu__content">
+        <div class="miembros__cards">
+            @for (miembro of miembros; track miembro.id) {
+                <button [ngClass]="isMiembroSeleccionado(miembro) ? 'active': ''" class="miembros__card" (click)="seleccionarMiembro(miembro)" data-aos="zoom-up" [attr.data-aos-delay]="50 * miembro.id">
+                    <img [src]="miembro.imagen" [alt]="miembro.nombre" class="miembros__img">
+                </button>
+              }
+        </div>
+    </div>
+    <div class="menu__control menu__next">
+        <button class="menu__button">
+            <div class="icon ic-right"></div>
+        </button>
+    </div>
+</div>

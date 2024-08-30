@@ -1,0 +1,14 @@
+<div class="cards">
+    @for (servicio of servicios; track $index) {
+      <div class="card bg-white" data-aos="flip-right" [attr.data-aos-delay]="200 + (100 * $index)">
+        <div class="card__content">
+            <app-lottie-lazy-component [options]="{
+              path: servicio.lottie, 
+              loop: false, 
+              autoplay: false,
+              }"></app-lottie-lazy-component>
+            <h3 class="card-title text-center">{{servicio.nombre}}</h3>
+        </div>
+      </div>
+    }
+</div>

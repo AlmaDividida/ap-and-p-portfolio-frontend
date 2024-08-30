@@ -21,37 +21,37 @@
                 <nav class="navbar">
                     <ul class="nav">
                         <li>
-                            <a [routerLink]="['/inicio']" >
+                            <a (click)="toggleMenu()" [routerLink]="['/inicio']" >
                                 <div class="icon ic-home"></div>
                                 <span>INICIO</span>
                             </a>
                         </li>
                         <li>
-                            <a [routerLink]="['/nosotros']" >
+                            <a (click)="toggleMenu()" [routerLink]="['/nosotros']" >
                                 <div class="icon ic-about"></div>
                                 <span>NOSOTROS</span>
                             </a>
                         </li>
                         <li>
-                            <a [routerLink]="['/proyectos']" fragment="proyectos" >
+                            <a (click)="toggleMenu()" [routerLink]="['/proyectos']" fragment="proyectos" >
                                 <div class="icon ic-projects"></div>
                                 <span>PROYECTOS</span>
                             </a>
                         </li>
                         <li>
-                            <a [routerLink]="['/servicios']" fragment="servicios" >
+                            <a (click)="toggleMenu()" [routerLink]="['/servicios']" fragment="servicios" >
                                 <div class="icon ic-services"></div>
                                 <span>SERVICIOS</span>
                             </a>
                         </li>
                         <li>
-                            <a [routerLink]="['/equipo']" fragment="equipo" >
+                            <a (click)="toggleMenu()" [routerLink]="['/equipo']" fragment="equipo" >
                                 <div class="icon ic-team"></div>
                                 <span>EQUIPO</span>
                             </a>
                         </li>
                         <li>
-                            <a [routerLink]="['/contacto']" fragment="contacto" >
+                            <a (click)="toggleMenu()" [routerLink]="['/contacto']" fragment="contacto" >
                                 <div class="icon ic-contact"></div>
                                 <span>CONTACTO</span>
                             </a>

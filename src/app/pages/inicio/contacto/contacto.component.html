@@ -1,11 +1,11 @@
-<section class="contact-section">
+<section class="contact-section" data-aos="fade-in" data-aos-offset="200">
     <div class="section-content">
         <div class="contact-header">
             <h2>Contacto</h2>
             <p>Contáctanos para asegurar tu éxito ¡Agenda tu cita!</p>    
         </div>
         <div class="contact-body">
-            <div class="contact-form">
+            <div class="contact-form" data-aos="fade-in" data-aos-duration="1000">
                 <form [formGroup]="contactForm" (ngSubmit)="sendContactForm()">
                     <input formControlName="nombre" type="text" name="nombre" id="nombre" placeholder="Nombre">
                     <input formControlName="email" type="email" name="email" id="email" placeholder="Email">
@@ -21,8 +21,8 @@
                     </div>
                 </form>
             </div>
-            <div class="contact-image">
-                <ng-lottie [styles]="styles" [options]="optionsContacto" width="100%" height="100%" />
+            <div class="contact-image" data-aos="zoom-right" data-aos-duration="2000">
+                <app-lottie-lazy-component [options]="options"></app-lottie-lazy-component>
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@
         </div>
         <div class="mensaje_enviado__modal-body">
             <h2>Mensaje enviado</h2>
-            <ng-lottie [styles]="styles" [options]="optionsMessageSuccessfully" width="100%" height="100%" />
+            <!-- <ng-lottie [styles]="styles" [options]="optionsMessageSuccessfully" width="100%" height="100%" /> -->
             <p>¡Gracias por tu mensaje! Nos pondremos en contacto contigo lo más pronto posible.</p>
             <button (click)="closeModal()" class="modal-button">Continuar</button>
         </div>

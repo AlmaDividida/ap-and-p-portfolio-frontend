@@ -28,7 +28,8 @@ export class InicioBannerComponent {
   ) {
     this.options = {
       path: 'lotties/banner.json',
-      loop: false
+      loop: false,
+      // autoplay: false,
     };
   }
 

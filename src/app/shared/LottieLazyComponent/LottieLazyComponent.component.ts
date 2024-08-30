@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import { AnimationOptions, LottieComponent } from 'ngx-lottie';
+import { DeviceService } from '../../services/device.service';
 
 @Component({
   selector: 'app-lottie-lazy-component',
@@ -22,8 +23,17 @@ export class LottieLazyComponent implements OnInit {
   @Input()
   options: AnimationOptions = {};
 
+  constructor(
+    protected deviceService: DeviceService,
+  ) {
+  }
+
   ngOnInit() {
     this.checkVisibility();
+
+    if (this.deviceService.isMobile()) {
+      this.options.autoplay = false;
+    }
   }
 
   @HostListener('window:scroll', ['$event'])

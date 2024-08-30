@@ -1,181 +1,183 @@
-export const servicios = [
+import { Servicio } from "../../../models/Servicio";
+
+export const servicios: Servicio[] = [
     {
         id: 1,
         nombre: 'Desarrollo Web',
-        sub_servicios: [
+        subservicios: [
             {
                 id: 1,
-                nombre: 'Páginas Informativas',
-                lottie: 'web-development.json',
+                nombre: 'Desarrollo de Sitios Web',
+                lottie: 'lotties/servicios/web-landing.json',
             },
             {
                 id: 2,
-                nombre: 'Tiendas Online',
-                lottie: 'web-development.json',
+                nombre: 'Desarrollo de Tiendas Online',
+                lottie: 'lotties/servicios/web-mobile.json',
             },
             {
                 id: 3,
-                nombre: 'Sistemas Web',
-                lottie: 'web-development.json',
+                nombre: 'Desarrollo de APIs en la nube (Cloud)',
+                lottie: 'lotties/servicios/web-cloud.json',
             },
             {
                 id: 4,
-                nombre: 'Paginas hechas a la medida',
-                lottie: 'web-development.json',
+                nombre: 'Desarrollo de Sistemas de Seguridad',
+                lottie: 'lotties/servicios/web-security.json',
             },
             {
                 id: 5,
                 nombre: 'Integración de Inteligencia Artificial',
-                lottie: 'web-development.json',
+                lottie: 'lotties/servicios/web-ia.json',
             },
         ]
     },
     {
         id: 2,
         nombre: 'Desarrollo Móvil',
-        sub_servicios: [
+        subservicios: [
             {
                 id: 1,
                 nombre: 'Aplicaciones Comerciales',
-                lottie: 'mobile-development.json',
+                lottie: 'lotties/servicios/mobile-shop.json',
             },
             {
                 id: 2,
                 nombre: 'Aplicaciones Administrativa',
-                lottie: 'mobile-development.json',
+                lottie: 'lotties/servicios/mobile-data.json',
             },
             {
                 id: 3,
                 nombre: 'Aplicaciones de Entretenimiento',
-                lottie: 'mobile-development.json',
+                lottie: 'lotties/servicios/mobile-game.json',
             },
             {
                 id: 4,
                 nombre: 'Paginas hechas a la medida',
-                lottie: 'web-development.json',
+                lottie: 'lotties/servicios/mobile-dev.json',
             },
             {
                 id: 4,
                 nombre: 'Integración de Inteligencia Artificial',
-                lottie: 'mobile-development.json',
+                lottie: 'lotties/servicios/ia.json',
             },
         ]
     },
     {
         id: 3,
         nombre: 'Marketing Digital',
-        sub_servicios: [
+        subservicios: [
             {
                 id: 1,
                 nombre: 'Analítica Web',
-                lottie: 'marketing.json',
+                lottie: 'lotties/servicios/marketing-analisis.json',
             },
             {
                 id: 2,
                 nombre: 'Campañas de Marketing',
-                lottie: 'marketing.json',
+                lottie: 'lotties/servicios/marketing-campana.json',
             },
             {
                 id: 3,
                 nombre: 'Optimización de Marketing',
-                lottie: 'marketing.json',
+                lottie: 'lotties/servicios/marketing-optimizacion.json',
             },
             {
                 id: 4,
                 nombre: 'Manejo de Redes Sociales',
-                lottie: 'marketing.json',
+                lottie: 'lotties/servicios/marketing-social.json',
             },
             {
                 id: 5,
                 nombre: 'Conceptualización de la Empresa',
-                lottie: 'marketing.json',
+                lottie: 'lotties/servicios/marketing-startup.json',
             },
             {
                 id: 6,
                 nombre: 'Envío Mensajes Personalizados',
-                lottie: 'marketing.json',
+                lottie: 'lotties/servicios/marketing-messages.json',
             },
             {
                 id: 7,
                 nombre: 'SEO y SEM',
-                lottie: 'marketing.json',
+                lottie: 'lotties/servicios/marketing-seo.json',
             },
             {
                 id: 8,
                 nombre: 'Integración de Inteligencia Artificial',
-                lottie: 'marketing.json',
+                lottie: 'lotties/servicios/ia.json',
             }
         ]
     },
     {
         id: 4,
         nombre: 'Diseño UI/UX (Interfaz de Usuario)',
-        sub_servicios: [
+        subservicios: [
             {
                 id: 1,
                 nombre: 'Optimizacion de diseño de Aplicaciones (Web y Móvil)',
-                lottie: 'ui-ux.json',
+                lottie: 'lotties/servicios/diseno.json',
             },
             {
                 id: 2,
                 nombre: 'Mejora de Experiencia de Usuario',
-                lottie: 'ui-ux.json',
+                lottie: 'lotties/servicios/diseno.json',
             },
             {
                 id: 3,
                 nombre: 'Diseño responsivo',
-                lottie: 'ui-ux.json',
+                lottie: 'lotties/servicios/diseno.json',
             },
             {
                 id: 4,
                 nombre: 'Tendencias de Diseño',
-                lottie: 'ui-ux.json',
+                lottie: 'lotties/servicios/diseno.json',
             },
             {
                 id: 5,
                 nombre: 'Animaciones e Interacciones',
-                lottie: 'ui-ux.json',
+                lottie: 'lotties/servicios/diseno.json',
             },
             {
                 id: 6,
                 nombre: 'Integración de Inteligencia Artificial',
-                lottie: 'ui-ux.json',
+                lottie: 'lotties/servicios/diseno.json',
             }
         ]
     },
     {
         id: 5,
         nombre: 'Soporte Técnico',
-        sub_servicios: [
+        subservicios: [
             {
                 id: 1,
                 nombre: 'Soporte 24/7',
-                lottie: 'technical-support.json',
+                lottie: 'lotties/servicios/2.json',
             },
             {
                 id: 2,
                 nombre: 'Soporte a Usuarios y Clientes',
-                lottie: 'technical-support.json',
+                lottie: 'lotties/servicios/4.json',
             },
             {
                 id: 3,
                 nombre: 'Seguimiento y solución de errores en la aplicación',
-                lottie: 'technical-support.json',
+                lottie: 'lotties/servicios/2.json',
             },
             {
                 id: 4,
                 nombre: 'Integración con redes sociales',
-                lottie: 'technical-support.json',
+                lottie: 'lotties/servicios/4.json',
             },
             {
                 id: 5,
                 nombre: 'Chatbots (Asistentes virtuales)',
-                lottie: 'technical-support.json',
+                lottie: 'lotties/servicios/2.json',
             },
             {
                 id: 6,
                 nombre: 'Soporte a Dispositivos',
-                lottie: 'technical-support.json',
+                lottie: 'lotties/servicios/4.json',
             }
         ]
     }

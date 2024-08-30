@@ -1,13 +1,9 @@
-export class Miembro {
-
-  id: number | undefined;
-  nombre: String | undefined;
-  apodo: String | undefined;
-  puesto: String | undefined;
-  descripcion: String | undefined;
-  imagen: String | undefined;
-  video: String | undefined;
-
-  constructor() { }
-
+export interface Miembro {
+    id: number;
+    nombre: string;
+    apodo: string;
+    puesto: string;
+    descripcion: string;
+    imagen: string;
+    video: string;
 }

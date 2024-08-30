@@ -1,22 +1,18 @@
-<div class="servicios__content container">
-  <h2 class="section-tilte">Servicios</h2>
-  <p class="section-text text-center">
-    ¿Sabias que somos una alianza entre empresas expertas en soluciones
-    tecnológicas?
-  </p>
-  <div class="section-headers">
+<div class="servicios__content container" data-aos="fade-in" data-aos-offset="200">
+  <div class="servicios__header">
+    <h2 class="section-tilte">Servicios</h2>
+    <p class="section-text text-center">
+      ¿Sabias que somos una alianza entre empresas expertas en soluciones
+      tecnológicas?
+    </p>
+  </div>
+  <div class="section-headers" data-aos="fade-up-in">
     <div class="buttons">
       @for (servicio of servicios; track $index) {
         <button class="btn" [ngClass]="selectedService.id==servicio.id?'active':''" (click)="selectService(servicio)"> {{servicio.nombre}} </button>
       }
     </div>
   </div>
-  <div class="cards">
-    @for (subServicio of selectedService.sub_servicios; track $index) {
-      <div class="card bg-white">
-        <!-- <ng-lottie class="card-icon" [options]="options" width="100" height="100"></ng-lottie> -->
-        <h3 class="card-title text-center">{{subServicio.nombre}}</h3>
-      </div>
-    }
-  </div>
+
+  <app-servicios-cards [servicios]="selectedService.subservicios"></app-servicios-cards>
 </div>

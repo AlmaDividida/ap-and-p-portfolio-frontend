@@ -350,6 +350,13 @@ body {
   color: var(--white-color);
 }
 
+.color-blue-gradient {
+  background: var(--gradient-blue-270);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+}
+
 .bg-gradient-blue-0 {
   background: linear-gradient(0deg, var(--light-blue-color) 0%, var(--dark-blue-color) 100%);
 }
@@ -404,7 +411,11 @@ body {
           transition: all 0.3s ease;
 }
 
- @-webkit-keyframes bg-gradient-blue-animation {
+.bg-transparent {
+  background: transparent;
+}
+
+@-webkit-keyframes bg-gradient-blue-animation {
   0% {
     background: var(--light-blue-color);
   }
@@ -446,6 +457,7 @@ body {
   text-decoration: none;
   transition: 0.3s ease;
   box-shadow: var(--shadow-md);
+  color: var(--dark-color);
 }
 
 .btn-dark-blue {
@@ -712,6 +724,16 @@ body {
   -webkit-mask: url(/img/shared/icons/envelope-solid.svg) no-repeat center / contain;
 }
 
+.ic-left {
+  mask: url(/img/shared/icons/chevron-left-solid.svg) no-repeat center / contain;
+  -webkit-mask: url(/img/shared/icons/chevron-left-solid.svg) no-repeat center / contain;
+}
+
+.ic-right {
+  mask: url(/img/shared/icons/chevron-right-solid.svg) no-repeat center / contain;
+  -webkit-mask: url(/img/shared/icons/chevron-right-solid.svg) no-repeat center / contain;
+}
+
 .ic-close:hover,
 .ic-menu:hover,
 .ic-home:hover,
@@ -719,7 +741,9 @@ body {
 .ic-services:hover,
 .ic-projects:hover,
 .ic-team:hover,
-.ic-contact:hover {
+.ic-contact:hover,
+.ic-left:hover,
+.ic-right:hover {
   background-color: var(--60-black-color);
   transition: ease 0.3s;
 }
@@ -858,7 +882,7 @@ body {
     background: var(--dark-color)!important;
   }
   * {
-    color: var(---color)!important;
+    color: var(--light-color)!important;
   }
 
   .icon {

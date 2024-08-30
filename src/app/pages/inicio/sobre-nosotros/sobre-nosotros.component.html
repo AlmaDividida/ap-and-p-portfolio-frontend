@@ -1,12 +1,14 @@
-<div class="sobre_nosotros__seccion">
+<div class="sobre_nosotros__seccion" data-aos="fade-in" data-aos-offset="200">
   <div class="sobre_nosotros__content container">
-    <h2 class="section-tilte">Sobre Nosotros</h2>
-    <p class="section-text text-center">
-      ¿Sabias que somos una alianza entre empresas expertas en soluciones
-      tecnológicas?
-    </p>
+    <div class="sobre_nosotros__header">
+      <h2 class="section-tilte">Sobre Nosotros</h2>
+      <p class="section-text text-center">
+        ¿Sabias que somos una alianza entre empresas expertas en soluciones
+        tecnológicas?
+      </p>
+    </div>
     <div class="sobre_nosotros__cards cards">
-        <div class="sobre_nosotros__card">
+        <div class="sobre_nosotros__card" data-aos="fade-in">
           <div class="card bg-white border-xl">
             <div class="card-content">
               <p>
@@ -17,10 +19,10 @@
             </div>
           </div>
         </div>
-        <div class="sobre_nosotros__frame">
+        <div class="sobre_nosotros__frame" data-aos="fade-in">
             <app-lottie-lazy-component [options]="options"></app-lottie-lazy-component>
         </div>
-        <div class="sobre_nosotros__card">
+        <div class="sobre_nosotros__card" data-aos="fade-in">
             <div class="card bg-white border-xl">
               <div class="card-content">
                 <p>
@@ -31,13 +33,15 @@
             </div>
         </div>
     </div>
-    <p class="text-center">¿Quieres saber que nos hace diferente?</p>
-    <div class="sobre_nosotros__buttons text-center">
-      <a
-        class="btn bg-gradient-blue-270 color-light"
-        [routerLink]="['/nosotros']" 
-        >Conócenos</a
-      >
+    <div class="sobre_nostros__footer">
+      <p class="text-center">¿Quieres saber que nos hace diferente?</p>
+      <div class="sobre_nosotros__buttons text-center">
+        <a
+          class="btn bg-gradient-blue-270 color-light"
+          [routerLink]="['/nosotros']" 
+          >Conócenos</a
+        >
+      </div>
     </div>
   </div>
 </div>

@@ -35,7 +35,6 @@
   .btn.active {
     background: var(--gradient-blue-270);
     color: var(--light-color);
-    font-weight: var(--font-weight-bold);
   }
 }
 
@@ -47,18 +46,19 @@
   .buttons {
     flex-direction: row;
     .btn {
-      padding: 1rem 2rem!important;
+      padding: .5rem 0!important;
+      width: 100%;
     }
     .btn:first-child {
       border-top-right-radius: 0;
-      border-top-left-radius: 1rem;
-      border-bottom-left-radius: 1rem;
+      border-top-left-radius: 5rem;
+      border-bottom-left-radius: 5rem;
     }
   
     .btn:last-child {
       border-bottom-left-radius: 0;
-      border-top-right-radius: 1rem;
-      border-bottom-right-radius: 1rem;
+      border-top-right-radius: 5rem;
+      border-bottom-right-radius: 5rem;
     }
   }
   
@@ -67,31 +67,5 @@
 @media screen and (min-width: 768px) {
   .servicios__content {
     margin: 4rem auto;
-  }
-}
-
-.cards {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-}
-
-@media screen and (min-width: 1024px) {
-  .cards {
-    justify-content: center;
-    flex-wrap: wrap;
-    overflow: hidden;
-    transition: all 0.5s;
-  }
-}
-
-.card {
-  flex: 0 0 calc(80% - 2rem);
-  margin: 1rem;
-}
-
-@media screen and (min-width: 1024px) {
-  .card {
-    flex: 0 0 calc(15% - 1rem);
   }
 }

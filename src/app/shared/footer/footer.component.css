@@ -93,8 +93,10 @@
 }
 
 @media (min-width: 1020px) {
-  .group {
-    flex-basis: 50%;
+  .centro {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 60%;
   }
 }
 
@@ -151,4 +153,36 @@ hr {
   hr {
     display: none;
   }
+}
+
+.contacto {
+  text-align: center;
+  margin-bottom: 4rem;
+  margin: 0 0 1rem;
+}
+
+@media screen and (min-width: 468px) {
+  .contacto {
+    order: 2;
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  .contacto {
+    margin: 0;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+  }
+}
+
+.contacto a {
+  color: var(--light-color);
+  line-height: 1.5;
+}
+
+.contacto h4 {
+  line-height: 0;
+  color: var(--light-color);
 }

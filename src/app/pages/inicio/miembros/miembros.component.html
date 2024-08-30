@@ -1,47 +1,27 @@
-<div class="content-father">
-  <div class="header">
-    <h2 id="encabezado">EQUIPO</h2>
-    <div id="linea"></div>
-    <p id="ep">La unión de éxito</p>
-  </div>
-
-  <div *ngIf="cargandoDatos">Cargando datos...</div>
-
-  <div class="content-principal" *ngIf="!cargandoDatos && miembroSeleccionado">
-    <div class="content-sub">
-      <div class="content-video">
-        <video id="VideoM" width="220" height="220" controls>
+<div class="miembros__section" data-aos="fade-in" data-aos-offset="200">
+  <div class="miembros__content container">
+    <div class="miembros__header">
+      <h2 class="section-tilte">Equipo</h2>
+      <p class="section-text text-center">
+        La unión del éxito
+      </p>
+    </div>
+    <div class="miembros__body">
+      <div class="miembros__frame" data-aos="zoom-right" data-aos-duration="2000">
+        <video id="video" class="miembros__video" width="100%" height="100%" autoplay preload="auto">
           <source [src]="miembroSeleccionado.video" type="video/mp4">
-          <source [src]="miembroSeleccionado.video" type="video/webm">
-          <source [src]="miembroSeleccionado.video" type="video/ogg">
           Tu navegador/dispositivo no soporta el video.
         </video>
       </div>
-      <div class="content-text">
-        <p id="saludo">Hola</p>
-        <div class="identificacion">
-          <p id="nombre">Soy {{ miembroSeleccionado.nombre }}</p>
-          <p id="apodo">({{ miembroSeleccionado.apodo }})</p>
-        </div>
-        <p id="puesto">{{ miembroSeleccionado.puesto }}</p>
-        <p id="descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. {{ miembroSeleccionado.descripcion }}</p>
+      <div class="miembros__text" data-aos="fade-in">
+        <h2 id="saludo">Hola</h2>
+        <p class="fs-xxl" id="nombre">Soy {{ miembroSeleccionado.nombre }} <span class="fw-medium color-blue-gradient">({{ miembroSeleccionado.apodo }})</span></p>
+        <p class="fs-xl fw-medium color-blue-gradient" id="puesto">{{ miembroSeleccionado.nombre }}</p>
+        <p class="fs-lg" id="descripcion">{{ miembroSeleccionado.descripcion }}</p>
       </div>
     </div>
-  </div>
-
-  <div class="contenedor-miembros" *ngIf="!cargandoDatos && miembrosLista.length > 0">
-    <div class="botones" (click)="moverIzquierda()"><img src="img/rightbtn.svg"></div>
-    <div class="carrusel-wrapper">
-      <div class="carrusel">
-        <div class="miembro" *ngFor="let miembroSeleccionado of miembrosLista; trackBy: trackByMiembroId">
-          <img [src]="miembroSeleccionado.imagen" 
-               [alt]="'Esta es una foto de ' + miembroSeleccionado.nombre" 
-               class="imagen-circular" 
-               (click)="seleccionarMiembro(miembroSeleccionado)">
-        </div>
-      </div>
+    <div class="miembros__footer">
+      <app-miembros-menu [miembros]="miembros" (miembroSeleccionadoEmitter)="getMiembroSeleccionado($event)"></app-miembros-menu>
     </div>
-    <div class="botones" (click)="moverDerecha()"><img src="/img/leftbtn.svg"></div>
   </div>
-  
 </div>

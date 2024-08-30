@@ -8,6 +8,7 @@ import { ServiciosComponent } from "./servicios/servicios.component";
 import ProyectosComponent from './proyectos/proyectos.component';
 import { MarcasComponent } from "./marcas/marcas.component";
 import NuesAdnComponent from './nues-adn/nues-adn.component';
+import MiembrosComponent from './miembros/miembros.component';
 
 @Component({
   selector: 'app-inicio',
@@ -21,7 +22,8 @@ import NuesAdnComponent from './nues-adn/nues-adn.component';
     ServiciosComponent,
     ProyectosComponent,
     MarcasComponent,
-    NuesAdnComponent
+    NuesAdnComponent,
+    MiembrosComponent,
 ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css',

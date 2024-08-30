@@ -45,7 +45,6 @@ a span {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
   z-index: 1000;
   transform: translateY(-100%);
   opacity: 0;
@@ -63,7 +62,29 @@ a span {
   transform: translateY(0);
   opacity: 1;
   transition: ease 0.3s;
+  min-height: 100vh;
 }
+
+.top .dropdown.active {
+  .dropdown__header .icon,
+  .dropdown__body .navbar .nav li a .icon {
+    background-color: var(--dark-color)!important;
+  }
+  .dropdown__body .navbar .nav li a span {
+    color: var(--dark-color)!important;
+  }
+}
+
+.top.dark-mode .dropdown.active {
+  .dropdown__header .icon,
+  .dropdown__body .navbar .nav li a .icon {
+    background-color: var(--light-color)!important;
+  }
+  .dropdown__body .navbar .nav li a span {
+    color: var(--light-color)!important;
+  }
+}
+
 
 
 .dropdown__header {
@@ -81,6 +102,13 @@ a span {
 .navbar {
   width: 100%;
   text-align: left;
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    margin-bottom: 0;
+  }
 }
 
 .nav{

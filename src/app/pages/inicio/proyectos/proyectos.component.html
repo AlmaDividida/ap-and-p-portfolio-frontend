@@ -1,9 +1,9 @@
-<div class="seccion-proyectos container">
-    <div>
+<div class="seccion-proyectos container" data-aos="fade-in" data-aos-offset="200">
+    <div class="seccion-proyectos__header">
         <h2>proyectos</h2>
         <p class="text-center">Inspiración para tu próximo proyecto</p>
     </div>
-    <div>
+    <div class="seccion-proyectos__body">
         <div class="botones">
             @for ( categoria of categorias; track $index) {
                 <button [ngClass]="selected==categoria?'boton-activo':''" class="boton" (click)="filtrarPorCategoria(categoria)">{{ categoria.descripcion }}</button>
@@ -13,7 +13,7 @@
             <div class="carpeta-fondo">
                 <div class="carpeta">
                     @for (proyecto of proyectos; track $index) {
-                        <a [href]="proyecto.url" target="_blank" class="celda">
+                        <a [href]="proyecto.url" target="_blank" class="celda" data-aos="zoom-out" [attr.data-aos-delay]="100 * $index">
                             <div class="img-celda">
                                 <img class="img" [src]="proyecto.imagen" [alt]="proyecto.titulo">
                             </div>

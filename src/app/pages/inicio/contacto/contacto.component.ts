@@ -5,6 +5,7 @@ import { CorreosService } from '../../../services/correos.service';
 import { DarkModeService } from '../../../services/dark-mode.service';
 import { RouterModule } from '@angular/router';
 import { AnimationOptions, LottieComponent } from 'ngx-lottie';
+import { LottieLazyComponent } from "../../../shared/LottieLazyComponent/LottieLazyComponent.component";
 
 @Component({
   selector: 'app-contacto',
@@ -13,17 +14,15 @@ import { AnimationOptions, LottieComponent } from 'ngx-lottie';
     CommonModule,
     ReactiveFormsModule,
     RouterModule,
-    LottieComponent,
-  ],
+    LottieLazyComponent
+],
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class ContactoComponent { 
   isModalActived: boolean = false;
-  optionsContacto: AnimationOptions;
-  optionsMessageSuccessfully: AnimationOptions;
-  styles: Partial<CSSStyleDeclaration>;
+  options: AnimationOptions;
 
   public contactForm = new FormGroup({
     nombre: new FormControl('', Validators.required),
@@ -35,18 +34,8 @@ export default class ContactoComponent {
     protected service: CorreosService,
     protected darkModeService: DarkModeService,
   ) {
-    this.optionsContacto = {
-      path: 'https://lottie.host/a87e1156-4f20-4ab1-82c0-94bd61e9a929/Lc4RHRkdhi.json',
-    };
-
-    this.optionsMessageSuccessfully = {
-      path: 'https://lottie.host/d61bcda6-9c46-4d2c-a341-012f4a131ef5/czfPl2VYxm.json',
-      loop: false,
-    };
-
-    this.styles = {
-      width: '100%',
-      height: '100%',
+    this.options = {
+      path: 'lotties/contacto/contacto.json',
     };
   }
 
